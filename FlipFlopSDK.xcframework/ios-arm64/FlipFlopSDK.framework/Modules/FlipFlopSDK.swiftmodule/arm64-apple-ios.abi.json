@@ -4243,6 +4243,34 @@
             "mangledName": "$s11FlipFlopSDK6ConfigV5isDevACSb_tcfc",
             "moduleName": "FlipFlopSDK",
             "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(server:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Config",
+                "printedName": "FlipFlopSDK.Config",
+                "usr": "s:11FlipFlopSDK6ConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFLServer",
+                "printedName": "FlipFlopSDK.FFLServer",
+                "usr": "s:11FlipFlopSDK9FFLServerO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11FlipFlopSDK6ConfigV6serverAcA9FFLServerO_tcfc",
+            "mangledName": "$s11FlipFlopSDK6ConfigV6serverAcA9FFLServerO_tcfc",
+            "moduleName": "FlipFlopSDK",
+            "declAttributes": [
               "AccessControl"
             ],
             "init_kind": "Designated"
@@ -50179,6 +50207,243 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "FFLServer",
+        "printedName": "FFLServer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dev",
+            "printedName": "dev",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopSDK.FFLServer.Type) -> FlipFlopSDK.FFLServer",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFLServer",
+                    "printedName": "FlipFlopSDK.FFLServer",
+                    "usr": "s:11FlipFlopSDK9FFLServerO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopSDK.FFLServer.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFLServer",
+                        "printedName": "FlipFlopSDK.FFLServer",
+                        "usr": "s:11FlipFlopSDK9FFLServerO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11FlipFlopSDK9FFLServerO3devyA2CmF",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO3devyA2CmF",
+            "moduleName": "FlipFlopSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "prod",
+            "printedName": "prod",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopSDK.FFLServer.Type) -> FlipFlopSDK.FFLServer",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFLServer",
+                    "printedName": "FlipFlopSDK.FFLServer",
+                    "usr": "s:11FlipFlopSDK9FFLServerO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopSDK.FFLServer.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFLServer",
+                        "printedName": "FlipFlopSDK.FFLServer",
+                        "usr": "s:11FlipFlopSDK9FFLServerO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11FlipFlopSDK9FFLServerO4prodyA2CmF",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO4prodyA2CmF",
+            "moduleName": "FlipFlopSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "huaweiProd",
+            "printedName": "huaweiProd",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopSDK.FFLServer.Type) -> FlipFlopSDK.FFLServer",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FFLServer",
+                    "printedName": "FlipFlopSDK.FFLServer",
+                    "usr": "s:11FlipFlopSDK9FFLServerO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopSDK.FFLServer.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FFLServer",
+                        "printedName": "FlipFlopSDK.FFLServer",
+                        "usr": "s:11FlipFlopSDK9FFLServerO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11FlipFlopSDK9FFLServerO10huaweiProdyA2CmF",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO10huaweiProdyA2CmF",
+            "moduleName": "FlipFlopSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFLServer",
+                "printedName": "FlipFlopSDK.FFLServer",
+                "usr": "s:11FlipFlopSDK9FFLServerO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FFLServer",
+                "printedName": "FlipFlopSDK.FFLServer",
+                "usr": "s:11FlipFlopSDK9FFLServerO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FlipFlopSDK9FFLServerO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO2eeoiySbAC_ACtFZ",
+            "moduleName": "FlipFlopSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11FlipFlopSDK9FFLServerO9hashValueSivp",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO9hashValueSivp",
+            "moduleName": "FlipFlopSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11FlipFlopSDK9FFLServerO9hashValueSivg",
+                "mangledName": "$s11FlipFlopSDK9FFLServerO9hashValueSivg",
+                "moduleName": "FlipFlopSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11FlipFlopSDK9FFLServerO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11FlipFlopSDK9FFLServerO4hash4intoys6HasherVz_tF",
+            "moduleName": "FlipFlopSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11FlipFlopSDK9FFLServerO",
+        "mangledName": "$s11FlipFlopSDK9FFLServerO",
+        "moduleName": "FlipFlopSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "FlipFlopLite",
         "printedName": "FlipFlopLite",
         "children": [
@@ -50389,7 +50654,7 @@
           {
             "kind": "Function",
             "name": "initialize",
-            "printedName": "initialize(isDev:)",
+            "printedName": "initialize(server:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -50398,15 +50663,15 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
+                "name": "FFLServer",
+                "printedName": "FlipFlopSDK.FFLServer",
                 "hasDefaultArg": true,
-                "usr": "s:Sb"
+                "usr": "s:11FlipFlopSDK9FFLServerO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11FlipFlopSDK0aB4LiteC10initialize5isDevySb_tFZ",
-            "mangledName": "$s11FlipFlopSDK0aB4LiteC10initialize5isDevySb_tFZ",
+            "usr": "s:11FlipFlopSDK0aB4LiteC10initialize6serveryAA9FFLServerO_tFZ",
+            "mangledName": "$s11FlipFlopSDK0aB4LiteC10initialize6serveryAA9FFLServerO_tFZ",
             "moduleName": "FlipFlopSDK",
             "static": true,
             "declAttributes": [
@@ -67021,63 +67286,63 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 3660,
+      "offset": 4495,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 3698,
+      "offset": 4533,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "BooleanLiteral",
-      "offset": 3739,
+      "offset": 4574,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "IntegerLiteral",
-      "offset": 9392,
+      "offset": 10227,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "IntegerLiteral",
-      "offset": 9407,
+      "offset": 10242,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "BooleanLiteral",
-      "offset": 11297,
+      "offset": 12132,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "FloatLiteral",
-      "offset": 16565,
+      "offset": 17400,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 22849,
+      "offset": 23684,
       "length": 8,
       "value": "\"PUBLIC\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 3602,
+      "offset": 4437,
       "length": 8,
       "value": "\"FlipFlopSDK.FlipFlop\""
     },
@@ -75813,121 +76078,107 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 175,
+      "offset": 249,
       "length": 5,
       "value": "80100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 222,
+      "offset": 296,
       "length": 5,
       "value": "80101"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 268,
+      "offset": 342,
       "length": 5,
       "value": "80102"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 303,
+      "offset": 377,
       "length": 5,
       "value": "80103"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 356,
+      "offset": 430,
       "length": 5,
       "value": "80200"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 404,
+      "offset": 478,
       "length": 5,
       "value": "80201"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 453,
+      "offset": 527,
       "length": 5,
       "value": "80202"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 508,
+      "offset": 582,
       "length": 5,
       "value": "80203"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 553,
+      "offset": 627,
       "length": 5,
       "value": "80204"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 597,
+      "offset": 671,
       "length": 5,
       "value": "80205"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 633,
+      "offset": 707,
       "length": 5,
       "value": "80206"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 728,
+      "offset": 802,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 773,
+      "offset": 847,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 820,
+      "offset": 894,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 940,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "BooleanLiteral",
-      "offset": 921,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1001,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopMediaSDK\/rtmp\/Sources\/RTMP\/RTMPStreamInfo.swift",

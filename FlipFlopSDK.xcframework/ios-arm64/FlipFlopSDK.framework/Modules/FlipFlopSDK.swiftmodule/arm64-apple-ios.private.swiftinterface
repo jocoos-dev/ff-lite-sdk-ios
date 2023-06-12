@@ -204,6 +204,7 @@ public protocol Running : AnyObject {
 public typealias UploadProgressBlock = ((Swift.Float) -> Swift.Void)?
 public struct Config {
   public init(isDev: Swift.Bool)
+  public init(server toSserver: FlipFlopSDK.FFLServer)
   public init(apiServerURI: Swift.String, rtmpServerURI: Swift.String, webrtcServerURI: Swift.String, gossipServerURI: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers public class FlipFlop : ObjectiveC.NSObject {
@@ -1695,12 +1696,22 @@ public enum FLVSoundRate : Swift.UInt8 {
   open func appendFile(_ file: Foundation.URL, completionHandler: FlipFlopSDK.MP4Sampler.Handler? = nil)
   open func createMetaData() -> FlipFlopSDK.ASObject
 }
+public enum FFLServer {
+  case dev
+  case prod
+  case huaweiProd
+  public static func == (a: FlipFlopSDK.FFLServer, b: FlipFlopSDK.FFLServer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @objc @_inheritsConvenienceInitializers public class FlipFlopLite : ObjectiveC.NSObject {
   public static let appId: Swift.String
   public static let streamKey: Swift.String
   public static let gossipToken: Swift.String
   public static let channelKey: Swift.String
-  public static func initialize(isDev: Swift.Bool = true)
+  public static func initialize(server: FlipFlopSDK.FFLServer = .dev)
   public static func getStreamer(appId: Swift.String, user: FlipFlopSDK.FFLite.User, streamKey: Swift.String, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopSDK.FFLStreamer
   public static func getLivePlayer(appId: Swift.String, user: FlipFlopSDK.FFLite.User, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopSDK.FFLLivePlayer
   public static func getVodPlayer(appId: Swift.String, channelKey: Swift.String, gossipToken: Swift.String, createdLiveAt: Swift.UInt64, userId: Swift.String? = nil) -> FlipFlopSDK.FFLVodPlayer
@@ -2205,6 +2216,8 @@ extension FlipFlopSDK.RTMPStream.PlayTransition : Swift.RawRepresentable {}
 extension FlipFlopSDK.RTMPStream.HowToPublish : Swift.Equatable {}
 extension FlipFlopSDK.RTMPStream.HowToPublish : Swift.Hashable {}
 extension FlipFlopSDK.RTMPStream.HowToPublish : Swift.RawRepresentable {}
+extension FlipFlopSDK.FFLServer : Swift.Equatable {}
+extension FlipFlopSDK.FFLServer : Swift.Hashable {}
 extension FlipFlopSDK.EventPhase : Swift.Equatable {}
 extension FlipFlopSDK.EventPhase : Swift.Hashable {}
 extension FlipFlopSDK.EventPhase : Swift.RawRepresentable {}
