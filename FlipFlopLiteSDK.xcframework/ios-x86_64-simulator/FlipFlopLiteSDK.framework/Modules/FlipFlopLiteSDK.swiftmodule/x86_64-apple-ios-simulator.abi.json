@@ -67286,63 +67286,63 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 4495,
+      "offset": 4492,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 4533,
+      "offset": 4530,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "BooleanLiteral",
-      "offset": 4574,
+      "offset": 4571,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "IntegerLiteral",
-      "offset": 10227,
+      "offset": 10224,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "IntegerLiteral",
-      "offset": 10242,
+      "offset": 10239,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "BooleanLiteral",
-      "offset": 12132,
+      "offset": 12129,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "FloatLiteral",
-      "offset": 17400,
+      "offset": 17397,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 23684,
+      "offset": 23681,
       "length": 8,
       "value": "\"PUBLIC\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop\/FlipFlopSDK_IOS\/FlipFlop.swift",
       "kind": "StringLiteral",
-      "offset": 4437,
+      "offset": 4434,
       "length": 8,
       "value": "\"FlipFlopLiteSDK.FlipFlop\""
     },
