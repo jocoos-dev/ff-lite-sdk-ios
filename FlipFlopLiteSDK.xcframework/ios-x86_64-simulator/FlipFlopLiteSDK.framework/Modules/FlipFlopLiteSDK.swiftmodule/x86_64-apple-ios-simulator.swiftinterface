@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FlipFlopLiteSDK
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FlipFlopLiteSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
@@ -29,6 +29,22 @@ import VideoToolbox
 import WebRTC
 import _Concurrency
 import _StringProcessing
+public enum TransitionType {
+  case none
+  case fade_in_out
+  case slide_to_left
+  case slide_to_top
+  case slide_to_camera_bottom
+  case fade_in_pip
+  public static func == (a: FlipFlopLiteSDK.TransitionType, b: FlipFlopLiteSDK.TransitionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct TransitionParams {
+  public init(transitionType: FlipFlopLiteSDK.TransitionType = .slide_to_left, duration: Foundation.TimeInterval = 0.3, pipTop: CoreFoundation.CGFloat = 0.2, pipRight: CoreFoundation.CGFloat = 0.2, pipRatio: CoreFoundation.CGFloat = 0.2, cameraRatio: CoreFoundation.CGFloat = 0.5)
+}
 @objc @_hasMissingDesignatedInitializers public class FFLLiveManager : ObjectiveC.NSObject {
   public var exposureTargetBias: Swift.Float {
     get
@@ -39,6 +55,8 @@ import _StringProcessing
   public func zoom(factor: CoreFoundation.CGFloat)
   public func getCameraZoomInfo() -> FlipFlopLiteSDK.ZoomInfo
   public func setPipMode(backgroundImage: UIKit.UIImage?, offsetX: CoreFoundation.CGFloat = 100, offsetY: CoreFoundation.CGFloat = 20, scale: CoreFoundation.CGFloat = 0.25)
+  public func showImage(overlayImage: UIKit.UIImage, transitionParams: FlipFlopLiteSDK.TransitionParams = TransitionParams())
+  public func hideImage()
   public func setOverlayImage(named: Swift.String, completion: (() -> Swift.Void)?) throws
   public func setFilter(filter: FlipFlopLiteSDK.VideoFilter)
   public func playVideo(asset: AVFoundation.AVAsset)
@@ -432,6 +450,7 @@ public protocol FFLLivePlayerDelegate : AnyObject {
   func onPrepared()
   func onStarted()
   func onPaused()
+  func onFailedToPlay()
   func onStopped()
   func onCompleted()
   func onProgressUpdated(sec: Swift.Float64)
@@ -457,6 +476,7 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
   public func onPrepared(player: FlipFlopLiteSDK.HLSPlayer)
   public func onPaused(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStarted(player: FlipFlopLiteSDK.HLSPlayer)
+  public func onFailedToPlay(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStopped(player: FlipFlopLiteSDK.HLSPlayer)
   public func onCompleted(player: FlipFlopLiteSDK.HLSPlayer)
   public func onError(player: FlipFlopLiteSDK.HLSPlayer, error: Swift.Error)
@@ -586,6 +606,7 @@ extension FlipFlopLiteSDK.FFPlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
   public func onProgressUpdated(player: FlipFlopLiteSDK.HLSPlayer, seconds: Swift.Float64)
   public func onPrepared(player: FlipFlopLiteSDK.HLSPlayer)
   public func onPaused(player: FlipFlopLiteSDK.HLSPlayer)
+  public func onFailedToPlay(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStarted(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStopped(player: FlipFlopLiteSDK.HLSPlayer)
   public func onCompleted(player: FlipFlopLiteSDK.HLSPlayer)
@@ -673,6 +694,8 @@ extension FlipFlopLiteSDK.FFMessageMeta {
   @objc public var userName: Swift.String
   @objc public var avatarProfileURL: Swift.String?
   @objc final public let data: Swift.String?
+  @objc public var participantCount: Swift.Int
+  @objc public var totalUserCount: Swift.Int
   @objc final public let customType: Swift.String?
   @objc final public let meta: FlipFlopLiteSDK.FFMessageMeta?
   @objc deinit
@@ -869,6 +892,7 @@ extension FlipFlopLiteSDK.FFLVodPlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
   public func onPrepared(player: FlipFlopLiteSDK.HLSPlayer)
   public func onPaused(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStarted(player: FlipFlopLiteSDK.HLSPlayer)
+  public func onFailedToPlay(player: FlipFlopLiteSDK.HLSPlayer)
   public func onStopped(player: FlipFlopLiteSDK.HLSPlayer)
   public func onCompleted(player: FlipFlopLiteSDK.HLSPlayer)
   public func onError(player: FlipFlopLiteSDK.HLSPlayer, error: Swift.Error)
@@ -1706,12 +1730,25 @@ public enum FFLServer {
     get
   }
 }
+public enum ServerConfig {
+  case dev
+  case prod
+  public static func == (a: FlipFlopLiteSDK.ServerConfig, b: FlipFlopLiteSDK.ServerConfig) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct FFLConfig {
+  public init(serverConfig: FlipFlopLiteSDK.ServerConfig)
+  public init(serverAddr: Swift.String)
+}
 @objc @_inheritsConvenienceInitializers public class FlipFlopLite : ObjectiveC.NSObject {
   public static let appId: Swift.String
   public static let streamKey: Swift.String
   public static let gossipToken: Swift.String
   public static let channelKey: Swift.String
-  public static func initialize(server: FlipFlopLiteSDK.FFLServer = .dev)
+  public static func initialize(config: FlipFlopLiteSDK.FFLConfig)
   public static func getStreamer(appId: Swift.String, user: FlipFlopLiteSDK.FFLite.User, streamKey: Swift.String, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
   public static func getLivePlayer(appId: Swift.String, user: FlipFlopLiteSDK.FFLite.User, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopLiteSDK.FFLLivePlayer
   public static func getVodPlayer(appId: Swift.String, channelKey: Swift.String, gossipToken: Swift.String, createdLiveAt: Swift.UInt64, userId: Swift.String? = nil) -> FlipFlopLiteSDK.FFLVodPlayer
@@ -1886,6 +1923,7 @@ public protocol HLSPlayerDelegate : AnyObject {
   func onPrepared(player: FlipFlopLiteSDK.HLSPlayer)
   func onPaused(player: FlipFlopLiteSDK.HLSPlayer)
   func onStarted(player: FlipFlopLiteSDK.HLSPlayer)
+  func onFailedToPlay(player: FlipFlopLiteSDK.HLSPlayer)
   func onStopped(player: FlipFlopLiteSDK.HLSPlayer)
   func onCompleted(player: FlipFlopLiteSDK.HLSPlayer)
   func onProgressUpdated(player: FlipFlopLiteSDK.HLSPlayer, seconds: Swift.Float64)
@@ -2160,6 +2198,8 @@ extension FlipFlopLiteSDK.RTMPSharedObject : Swift.CustomDebugStringConvertible 
 public struct MediaConfig {
   public init(width: Swift.Int, height: Swift.Int, videoBitrate: Swift.Int, keyFrameInterval: Swift.Int, fps: Swift.Int, sampleRate: Swift.Int, audioBitrate: Swift.Int, cameraPos: AVFoundation.AVCaptureDevice.Position)
 }
+extension FlipFlopLiteSDK.TransitionType : Swift.Equatable {}
+extension FlipFlopLiteSDK.TransitionType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Equatable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.RawRepresentable {}
@@ -2218,6 +2258,8 @@ extension FlipFlopLiteSDK.RTMPStream.HowToPublish : Swift.Hashable {}
 extension FlipFlopLiteSDK.RTMPStream.HowToPublish : Swift.RawRepresentable {}
 extension FlipFlopLiteSDK.FFLServer : Swift.Equatable {}
 extension FlipFlopLiteSDK.FFLServer : Swift.Hashable {}
+extension FlipFlopLiteSDK.ServerConfig : Swift.Equatable {}
+extension FlipFlopLiteSDK.ServerConfig : Swift.Hashable {}
 extension FlipFlopLiteSDK.EventPhase : Swift.Equatable {}
 extension FlipFlopLiteSDK.EventPhase : Swift.Hashable {}
 extension FlipFlopLiteSDK.EventPhase : Swift.RawRepresentable {}

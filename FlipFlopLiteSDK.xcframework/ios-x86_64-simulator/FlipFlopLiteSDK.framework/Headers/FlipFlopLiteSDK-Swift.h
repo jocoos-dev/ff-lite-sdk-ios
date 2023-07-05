@@ -400,6 +400,8 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK9FFMessage")
 @property (nonatomic, copy) NSString * _Nonnull userName;
 @property (nonatomic, copy) NSString * _Nullable avatarProfileURL;
 @property (nonatomic, readonly, copy) NSString * _Nullable data;
+@property (nonatomic) NSInteger participantCount;
+@property (nonatomic) NSInteger totalUserCount;
 @property (nonatomic, readonly, copy) NSString * _Nullable customType;
 @property (nonatomic, readonly, strong) FFMessageMeta * _Nullable meta;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
