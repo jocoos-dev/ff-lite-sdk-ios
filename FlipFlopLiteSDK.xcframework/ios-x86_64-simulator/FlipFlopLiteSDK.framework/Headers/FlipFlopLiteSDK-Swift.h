@@ -237,6 +237,7 @@ using UInt = size_t;
 @import Foundation;
 @import GLKit;
 @import MetalKit;
+@import MobileVLCKit;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -371,11 +372,21 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK13FFLLivePlayer")
 
 
 
+
+
+SWIFT_CLASS("_TtC15FlipFlopLiteSDK7FFLRoom")
+@interface FFLRoom : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC15FlipFlopLiteSDK11FFLStreamer")
 @interface FFLStreamer : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -628,6 +639,7 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK12FlipFlopLite")
 @end
 
 
+
 @class NSCoder;
 @class EAGLContext;
 
@@ -674,6 +686,7 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK9HLSPlayer")
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 @end
 
+
 @protocol MTLDevice;
 
 /// A view that displays a video content of a NetStream object which uses Metal api.
@@ -714,7 +727,6 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK10NetService")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
 @class NSNetService;
 @class NSInputStream;
 @class NSOutputStream;
@@ -722,6 +734,7 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK10NetService")
 @interface NetService (SWIFT_EXTENSION(FlipFlopLiteSDK)) <NSNetServiceDelegate>
 - (void)netService:(NSNetService * _Nonnull)sender didAcceptConnectionWithInputStream:(NSInputStream * _Nonnull)inputStream outputStream:(NSOutputStream * _Nonnull)outputStream;
 @end
+
 
 
 
@@ -756,6 +769,19 @@ typedef SWIFT_ENUM(NSInteger, Preset, open) {
   PresetVga640x480 = 2,
   PresetCif352x288 = 3,
 };
+
+
+SWIFT_CLASS("_TtC15FlipFlopLiteSDK10RTMPPlayer")
+@interface RTMPPlayer : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSNotification;
+
+@interface RTMPPlayer (SWIFT_EXTENSION(FlipFlopLiteSDK)) <VLCMediaPlayerDelegate>
+- (void)mediaPlayerStateChanged:(NSNotification * _Nonnull)aNotification;
+@end
 
 
 /// flash.net.NetStream for Swift

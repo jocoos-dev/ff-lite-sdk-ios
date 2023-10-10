@@ -16,8 +16,10 @@ import DeviceKit
 import Foundation
 import GLKit
 import ImageIO
+import LDSwiftEventSource
 import Logboard
 import MetalKit
+import MobileVLCKit
 import Network
 import Queuer
 import SocketRocket
@@ -29,6 +31,36 @@ import VideoToolbox
 import WebRTC
 import _Concurrency
 import _StringProcessing
+public enum Origin {
+  case app
+  case members
+  case system
+  public static func == (a: FlipFlopLiteSDK.Origin, b: FlipFlopLiteSDK.Origin) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct FFLMessage {
+  public let messageId: Swift.String
+  public let sentAt: Swift.String
+  public let origin: FlipFlopLiteSDK.Origin
+  public let appUserId: Swift.String
+  public let appUsername: Swift.String
+  public let customType: Swift.String
+  public let message: Swift.String
+  public let participantCount: Swift.UInt64?
+}
+public struct FFLVideoRoom {
+  public let id: Swift.UInt64
+  public let state: Swift.String
+  public let videoRoomState: Swift.String
+  public let type: Swift.String
+  public let title: Swift.String
+}
+@objc @_hasMissingDesignatedInitializers public class FFLRoom : ObjectiveC.NSObject {
+  @objc deinit
+}
 public enum TransitionType {
   case none
   case fade_in_out
@@ -36,6 +68,8 @@ public enum TransitionType {
   case slide_to_top
   case slide_to_camera_bottom
   case fade_in_pip
+  case enter_top
+  case enter_fade_in
   public static func == (a: FlipFlopLiteSDK.TransitionType, b: FlipFlopLiteSDK.TransitionType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -56,7 +90,7 @@ public struct TransitionParams {
   public func getCameraZoomInfo() -> FlipFlopLiteSDK.ZoomInfo
   public func setPipMode(backgroundImage: UIKit.UIImage?, offsetX: CoreFoundation.CGFloat = 100, offsetY: CoreFoundation.CGFloat = 20, scale: CoreFoundation.CGFloat = 0.25)
   public func showImage(overlayImage: UIKit.UIImage, transitionParams: FlipFlopLiteSDK.TransitionParams = TransitionParams())
-  public func hideImage()
+  public func hideImage(transitionParams: FlipFlopLiteSDK.TransitionParams? = nil)
   public func setOverlayImage(named: Swift.String, completion: (() -> Swift.Void)?) throws
   public func setFilter(filter: FlipFlopLiteSDK.VideoFilter)
   public func playVideo(asset: AVFoundation.AVAsset)
@@ -167,33 +201,78 @@ extension FlipFlopLiteSDK.WebRTCStreamer {
 public struct DeviceUtil {
   public static func device(withPosition: AVFoundation.AVCaptureDevice.Position) -> AVFoundation.AVCaptureDevice?
 }
-public protocol FFLStreamerDelegate : AnyObject {
-  func onPrepared()
-  func onStarted()
-  func onStopped()
-  func onError(error: FlipFlopLiteSDK.FFError)
-  func onChatMessageReceived(message: FlipFlopLiteSDK.FFMessage)
-  func onInSufficientBW()
-  func onSufficientBW()
-  func onVideoBitrateChanged(newBitrate: Swift.Int)
+public enum StreamerState {
+  case prepared
+  case started
+  case stopped
+  case closed
+  public static func == (a: FlipFlopLiteSDK.StreamerState, b: FlipFlopLiteSDK.StreamerState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
-public protocol FFZoomChangeDelegate : AnyObject {
-  func onZoomChanged(zoomFactor: CoreFoundation.CGFloat)
+public enum BroadcastState {
+  case inactive
+  case active
+  public static func == (a: FlipFlopLiteSDK.BroadcastState, b: FlipFlopLiteSDK.BroadcastState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PlayerState {
+  case prepared
+  case started
+  case paused
+  case stopped
+  case completed
+  case closed
+  public static func == (a: FlipFlopLiteSDK.PlayerState, b: FlipFlopLiteSDK.PlayerState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol FFLStreamerDelegate : AnyObject {
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didUpdate streamerState: FlipFlopLiteSDK.StreamerState)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didUpdate broadcastState: FlipFlopLiteSDK.BroadcastState)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didExist videoRoom: FlipFlopLiteSDK.FFLVideoRoom)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didPublish alarmState: FlipFlopLiteSDK.AlarmState)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didChangeVideoBitrate bitrate: Swift.Int)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didChangeZoom zoomFactor: CoreFoundation.CGFloat)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didReceive message: FlipFlopLiteSDK.FFLMessage)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didFail error: FlipFlopLiteSDK.FFError)
+}
+public enum AlarmState {
+  case normal
+  case alert_level_1
+  case alert_level_2
+  case alert_level_3
+  public static func == (a: FlipFlopLiteSDK.AlarmState, b: FlipFlopLiteSDK.AlarmState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol FFAlarmDelegate : AnyObject {
+  func onAlarmPublished(state: FlipFlopLiteSDK.AlarmState)
 }
 @objc @_hasMissingDesignatedInitializers public class FFLStreamer : ObjectiveC.NSObject {
   weak public var delegate: FlipFlopLiteSDK.FFLStreamerDelegate?
-  weak public var zoomChangeDelegate: FlipFlopLiteSDK.FFZoomChangeDelegate?
   public var isGestureEnabled: Swift.Bool {
     get
     set
   }
+  public func setVideoRoomInfo(title: Swift.String)
   public func enter()
   public func prepare(preview: UIKit.UIView, config: FlipFlopLiteSDK.FFStreamerConfig = FFStreamerConfig())
   public func start()
+  public func restart(videoRoomId: Swift.UInt64)
   public func stop()
   public func exit()
   public func retry()
-  public func liveChat() -> FlipFlopLiteSDK.FFLStreamerChat?
+  public func liveChat() -> FlipFlopLiteSDK.FFLChannel?
   public func liveManager() -> FlipFlopLiteSDK.FFLLiveManager?
   @objc deinit
 }
@@ -207,12 +286,10 @@ extension FlipFlopLiteSDK.FFLStreamer {
   public func onRTMPStopped()
   public func onRTMPError(code: Swift.Int, description: Swift.String)
   public func onVideoBitrateChanged(newBitrate: Swift.Int, maxBitrate: Swift.Int)
+  public func onAlarmchanged(insufficientCount: Swift.Int)
 }
 extension FlipFlopLiteSDK.FFLStreamer {
   public func onZoomChanged(zoomFactor: CoreFoundation.CGFloat)
-}
-extension FlipFlopLiteSDK.FFLStreamer {
-  public func onConnected()
 }
 public protocol Running : AnyObject {
   var isRunning: FlipFlopLiteSDK.Atomic<Swift.Bool> { get }
@@ -295,6 +372,21 @@ extension UIKit.UIColor {
 extension CoreImage.CIImage {
   public class func image(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat, color: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat) -> CoreImage.CIImage
   public class func alphaImage(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat, color: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat) -> CoreImage.CIImage
+}
+public protocol RTMPPlayerDelegate : AnyObject {
+  func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
+}
+@objc open class RTMPPlayer : ObjectiveC.NSObject {
+  public init(url: Foundation.URL, view: UIKit.UIView, delegate: FlipFlopLiteSDK.RTMPPlayerDelegate)
+  @objc deinit
+  open func start()
+  open func stop()
+}
+extension FlipFlopLiteSDK.RTMPPlayer : MobileVLCKit.VLCMediaPlayerDelegate {
+  @objc dynamic public func mediaPlayerStateChanged(_ aNotification: Foundation.Notification)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HKView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static var defaultBackgroundColor: UIKit.UIColor
@@ -447,17 +539,10 @@ extension UIKit.UIImage {
   }
 }
 public protocol FFLLivePlayerDelegate : AnyObject {
-  func onPrepared()
-  func onStarted()
-  func onPaused()
-  func onFailedToPlay()
-  func onStopped()
-  func onCompleted()
-  func onProgressUpdated(sec: Swift.Float64)
-  func onError(error: FlipFlopLiteSDK.FFError)
-  func onChatMessageReceived(message: FlipFlopLiteSDK.FFMessage)
-  func onBackground()
-  func onForeground()
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didUpdate playerState: FlipFlopLiteSDK.PlayerState)
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didUpdate broadcastState: FlipFlopLiteSDK.BroadcastState)
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didReceive message: FlipFlopLiteSDK.FFLMessage)
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didFail error: FlipFlopLiteSDK.FFError)
 }
 @objc @_hasMissingDesignatedInitializers public class FFLLivePlayer : ObjectiveC.NSObject {
   weak public var delegate: FlipFlopLiteSDK.FFLLivePlayerDelegate?
@@ -467,7 +552,7 @@ public protocol FFLLivePlayerDelegate : AnyObject {
   public func stop()
   public func exit()
   public func setFrame(frame: CoreFoundation.CGRect)
-  public func liveChat() -> FlipFlopLiteSDK.FFLLiveChat?
+  public func liveChat() -> FlipFlopLiteSDK.FFLChannel?
   public func mute(on: Swift.Bool)
   @objc deinit
 }
@@ -483,6 +568,12 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
   public func onVideoResolutionSize(player: FlipFlopLiteSDK.HLSPlayer, size: CoreFoundation.CGSize)
   public func onBackground(player: FlipFlopLiteSDK.HLSPlayer)
   public func onForeground(player: FlipFlopLiteSDK.HLSPlayer)
+}
+extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.RTMPPlayerDelegate {
+  public func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
 }
 public struct ZoomInfo {
   public let min: CoreFoundation.CGFloat
@@ -869,7 +960,11 @@ extension FlipFlopLiteSDK.MTHKView : MetalKit.MTKViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func mtkView(_ view: MetalKit.MTKView, drawableSizeWillChange size: CoreFoundation.CGSize)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func draw(in view: MetalKit.MTKView)
 }
-public protocol FFLVodPlayerDelegate : FlipFlopLiteSDK.FFLLivePlayerDelegate {
+public protocol FFLVodPlayerDelegate : AnyObject {
+  func fflVodPlayer(_ vodPlayer: FlipFlopLiteSDK.FFLVodPlayer, didUpdate playerState: FlipFlopLiteSDK.PlayerState)
+  func fflVodPlayer(_ vodPlayer: FlipFlopLiteSDK.FFLVodPlayer, didUpdateProgress seconds: Swift.Float64)
+  func fflVodPlayer(_ vodPlayer: FlipFlopLiteSDK.FFLVodPlayer, didReceive message: FlipFlopLiteSDK.FFLMessage)
+  func fflVodPlayer(_ vodPlayer: FlipFlopLiteSDK.FFLVodPlayer, didFail error: FlipFlopLiteSDK.FFError)
 }
 @objc @_hasMissingDesignatedInitializers public class FFLVodPlayer : ObjectiveC.NSObject {
   weak public var delegate: FlipFlopLiteSDK.FFLVodPlayerDelegate?
@@ -1009,6 +1104,10 @@ extension FlipFlopLiteSDK.SoundTransform : Swift.CustomDebugStringConvertible {
 }
 extension FlipFlopLiteSDK.NetSocket : Foundation.StreamDelegate {
   @objc dynamic public func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
+}
+@_hasMissingDesignatedInitializers public class FFLChannel {
+  public func sendMessage(message: Swift.String, onFailure: ((Swift.Int, Swift.String) -> Swift.Void)? = nil)
+  @objc deinit
 }
 public protocol FFLChat {
   func sendMessage(text: Swift.String, customType: Swift.String?, data: Swift.String?)
@@ -1723,7 +1822,6 @@ public enum FLVSoundRate : Swift.UInt8 {
 public enum FFLServer {
   case dev
   case prod
-  case huaweiProd
   public static func == (a: FlipFlopLiteSDK.FFLServer, b: FlipFlopLiteSDK.FFLServer) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -1749,9 +1847,11 @@ public struct FFLConfig {
   public static let gossipToken: Swift.String
   public static let channelKey: Swift.String
   public static func initialize(config: FlipFlopLiteSDK.FFLConfig)
-  public static func getStreamer(appId: Swift.String, user: FlipFlopLiteSDK.FFLite.User, streamKey: Swift.String, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
-  public static func getLivePlayer(appId: Swift.String, user: FlipFlopLiteSDK.FFLite.User, gossipToken: Swift.String, channelKey: Swift.String) -> FlipFlopLiteSDK.FFLLivePlayer
+  public static func getStreamer(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
+  public static func getLivePlayer(accessToken: Swift.String, videoRoomId: Swift.UInt64, channelId: Swift.UInt64) -> FlipFlopLiteSDK.FFLLivePlayer
   public static func getVodPlayer(appId: Swift.String, channelKey: Swift.String, gossipToken: Swift.String, createdLiveAt: Swift.UInt64, userId: Swift.String? = nil) -> FlipFlopLiteSDK.FFLVodPlayer
+  public static func getRoom(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLRoom
+  public static func debug(level: Swift.Int)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1959,6 +2059,7 @@ public protocol HLSPlayerDelegate : AnyObject {
   open func pause()
   open func resume()
   open func setFrame(frame: CoreFoundation.CGRect)
+  open func updatePlayerItem(url: Foundation.URL)
   open func seekTo(seconds: Swift.Float64, exactly: Swift.Bool = false, completion: ((Swift.Float64) -> Swift.Void)?)
   open func stop()
   open func startPIP()
@@ -2198,8 +2299,18 @@ extension FlipFlopLiteSDK.RTMPSharedObject : Swift.CustomDebugStringConvertible 
 public struct MediaConfig {
   public init(width: Swift.Int, height: Swift.Int, videoBitrate: Swift.Int, keyFrameInterval: Swift.Int, fps: Swift.Int, sampleRate: Swift.Int, audioBitrate: Swift.Int, cameraPos: AVFoundation.AVCaptureDevice.Position)
 }
+extension FlipFlopLiteSDK.Origin : Swift.Equatable {}
+extension FlipFlopLiteSDK.Origin : Swift.Hashable {}
 extension FlipFlopLiteSDK.TransitionType : Swift.Equatable {}
 extension FlipFlopLiteSDK.TransitionType : Swift.Hashable {}
+extension FlipFlopLiteSDK.StreamerState : Swift.Equatable {}
+extension FlipFlopLiteSDK.StreamerState : Swift.Hashable {}
+extension FlipFlopLiteSDK.BroadcastState : Swift.Equatable {}
+extension FlipFlopLiteSDK.BroadcastState : Swift.Hashable {}
+extension FlipFlopLiteSDK.PlayerState : Swift.Equatable {}
+extension FlipFlopLiteSDK.PlayerState : Swift.Hashable {}
+extension FlipFlopLiteSDK.AlarmState : Swift.Equatable {}
+extension FlipFlopLiteSDK.AlarmState : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Equatable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.RawRepresentable {}
