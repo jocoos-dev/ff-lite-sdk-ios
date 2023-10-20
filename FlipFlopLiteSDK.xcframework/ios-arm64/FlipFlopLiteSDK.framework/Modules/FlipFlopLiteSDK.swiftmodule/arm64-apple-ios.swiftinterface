@@ -311,6 +311,7 @@ extension CoreImage.CIImage {
 }
 public protocol RTMPPlayerDelegate : AnyObject {
   func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
@@ -507,6 +508,7 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
 }
 extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.RTMPPlayerDelegate {
   public func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
@@ -1596,15 +1598,6 @@ public enum FLVSoundRate : Swift.UInt8 {
   open func appendFile(_ file: Foundation.URL, completionHandler: FlipFlopLiteSDK.MP4Sampler.Handler? = nil)
   open func createMetaData() -> FlipFlopLiteSDK.ASObject
 }
-public enum FFLServer {
-  case dev
-  case prod
-  public static func == (a: FlipFlopLiteSDK.FFLServer, b: FlipFlopLiteSDK.FFLServer) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
 public enum ServerConfig {
   case dev
   case prod
@@ -1619,16 +1612,12 @@ public struct FFLConfig {
   public init(serverAddr: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers public class FlipFlopLite : ObjectiveC.NSObject {
-  public static let appId: Swift.String
-  public static let streamKey: Swift.String
-  public static let gossipToken: Swift.String
-  public static let channelKey: Swift.String
   public static func initialize(config: FlipFlopLiteSDK.FFLConfig)
   public static func getStreamer(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
   public static func getLivePlayer(accessToken: Swift.String, videoRoomId: Swift.UInt64, channelId: Swift.UInt64) -> FlipFlopLiteSDK.FFLLivePlayer
   public static func getVodPlayer(accessToken: Swift.String, channelId: Swift.UInt64, liveStartedAt: Swift.String) -> FlipFlopLiteSDK.FFLVodPlayer
   public static func getRoom(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLRoom
-  public static func debug(level: Swift.Int)
+  public static func debug(level: Logboard.LBLogger.Level)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -2045,8 +2034,6 @@ extension FlipFlopLiteSDK.RTMPStream.PlayTransition : Swift.RawRepresentable {}
 extension FlipFlopLiteSDK.RTMPStream.HowToPublish : Swift.Equatable {}
 extension FlipFlopLiteSDK.RTMPStream.HowToPublish : Swift.Hashable {}
 extension FlipFlopLiteSDK.RTMPStream.HowToPublish : Swift.RawRepresentable {}
-extension FlipFlopLiteSDK.FFLServer : Swift.Equatable {}
-extension FlipFlopLiteSDK.FFLServer : Swift.Hashable {}
 extension FlipFlopLiteSDK.ServerConfig : Swift.Equatable {}
 extension FlipFlopLiteSDK.ServerConfig : Swift.Hashable {}
 extension FlipFlopLiteSDK.EventPhase : Swift.Equatable {}
