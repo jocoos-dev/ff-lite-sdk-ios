@@ -780,6 +780,7 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK10RTMPPlayer")
 
 @interface RTMPPlayer (SWIFT_EXTENSION(FlipFlopLiteSDK)) <VLCMediaPlayerDelegate>
 - (void)mediaPlayerStateChanged:(NSNotification * _Nonnull)aNotification;
+- (void)mediaPlayerTimeChanged:(NSNotification * _Nonnull)aNotification;
 @end
 
 

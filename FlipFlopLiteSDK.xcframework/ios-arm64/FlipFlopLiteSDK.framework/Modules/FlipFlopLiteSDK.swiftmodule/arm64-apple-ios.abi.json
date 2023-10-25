@@ -3887,6 +3887,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "FlipFlopLiteSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "StreamerState",
         "printedName": "StreamerState",
@@ -7525,6 +7532,96 @@
         "printedName": "RTMPPlayer",
         "children": [
           {
+            "kind": "Var",
+            "name": "isMuted",
+            "printedName": "isMuted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvp",
+            "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvp",
+            "moduleName": "FlipFlopLiteSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvg",
+                "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvg",
+                "moduleName": "FlipFlopLiteSDK",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvs",
+                "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvs",
+                "moduleName": "FlipFlopLiteSDK",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvM",
+                "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC7isMutedSbvM",
+                "moduleName": "FlipFlopLiteSDK",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(url:view:delegate:)",
@@ -7653,6 +7750,36 @@
             "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC23mediaPlayerStateChangedyy10Foundation12NotificationVF",
             "moduleName": "FlipFlopLiteSDK",
             "objc_name": "mediaPlayerStateChanged:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mediaPlayerTimeChanged",
+            "printedName": "mediaPlayerTimeChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Notification",
+                "printedName": "Foundation.Notification",
+                "usr": "s:10Foundation12NotificationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@FlipFlopLiteSDK@objc(cs)RTMPPlayer(im)mediaPlayerTimeChanged:",
+            "mangledName": "$s15FlipFlopLiteSDK10RTMPPlayerC22mediaPlayerTimeChangedyy10Foundation12NotificationVF",
+            "moduleName": "FlipFlopLiteSDK",
+            "objc_name": "mediaPlayerTimeChanged:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -8334,6 +8461,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -25393,6 +25527,32 @@
             "declKind": "Func",
             "usr": "s:15FlipFlopLiteSDK12FFLVodPlayerC4exityyF",
             "mangledName": "$s15FlipFlopLiteSDK12FFLVodPlayerC4exityyF",
+            "moduleName": "FlipFlopLiteSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "mute",
+            "printedName": "mute(on:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK12FFLVodPlayerC4mute2onySb_tF",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLVodPlayerC4mute2onySb_tF",
             "moduleName": "FlipFlopLiteSDK",
             "declAttributes": [
               "AccessControl"
@@ -62547,504 +62707,518 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 2100,
+      "offset": 2120,
       "length": 13,
       "value": "\"FFLStreamer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2267,
+      "offset": 2287,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2422,
+      "offset": 2442,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2470,
+      "offset": 2490,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2518,
+      "offset": 2538,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 2690,
+      "offset": 2710,
       "length": 10,
       "value": "\"No Title\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3345,
+      "offset": 3365,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3486,
+      "offset": 3506,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3624,
+      "offset": 3644,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3760,
+      "offset": 3780,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4323,
+      "offset": 4343,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4710,
+      "offset": 4730,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 5150,
+      "offset": 5209,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 5188,
+      "offset": 5247,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 5742,
+      "offset": 5801,
       "length": 43,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 5767,
+      "offset": 5826,
       "length": 1,
       "value": "\"?mode=\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 5784,
+      "offset": 5843,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 6539,
+      "offset": 6755,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
+      "kind": "StringLiteral",
+      "offset": 6912,
+      "length": 61,
+      "value": "\"please make sure you setup and activate your AVAudioSession\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7188,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 6574,
+      "offset": 7223,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7232,
+      "offset": 7881,
       "length": 29,
       "value": "\"FFLStreamer is not prepared\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7343,
+      "offset": 7992,
       "length": 29,
       "value": "\"FFLStreamer is not prepared\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7479,
+      "offset": 8128,
       "length": 74,
       "value": "\"server address does not exist. check if FFLStreamer is prepared properly\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7640,
+      "offset": 8289,
       "length": 31,
       "value": "\"server address does not exist\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7778,
+      "offset": 8427,
       "length": 69,
       "value": "\"streakKey does not exist. check if FFLStreamer is prepared properly\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 7934,
+      "offset": 8583,
       "length": 27,
       "value": "\"stream key does not exist\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 8147,
+      "offset": 8796,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 8549,
+      "offset": 9198,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 9598,
+      "offset": 10247,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 9636,
+      "offset": 10285,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 10526,
+      "offset": 11175,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 10564,
+      "offset": 11213,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 11920,
+      "offset": 12569,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 11958,
+      "offset": 12607,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 12865,
+      "offset": 13514,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 12903,
+      "offset": 13552,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 13634,
+      "offset": 14283,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 13669,
+      "offset": 14318,
       "length": 43,
       "value": "\"[FFLStreamer] started videoRoomID = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 13711,
+      "offset": 14360,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 13959,
+      "offset": 14608,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 13997,
+      "offset": 14646,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 14355,
+      "offset": 15004,
       "length": 27,
       "value": "\"started video room: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 14381,
+      "offset": 15030,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 14710,
+      "offset": 15359,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 14748,
+      "offset": 15397,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 15106,
+      "offset": 15755,
       "length": 17,
       "value": "\"left video room\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 15332,
+      "offset": 15981,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 15594,
+      "offset": 16243,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 15632,
+      "offset": 16281,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 15988,
+      "offset": 16637,
       "length": 16,
       "value": "\"end video room\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 2008,
+      "offset": 2028,
       "length": 11,
       "value": "\"FlipFlopLiteSDK.FFLStreamer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17073,
+      "offset": 17722,
       "length": 20,
       "value": "\"[RTMP] onConnected\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17166,
+      "offset": 17815,
       "length": 23,
       "value": "\"[RTMP] onDisconnected\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17257,
+      "offset": 17906,
       "length": 18,
       "value": "\"[RTMP] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17430,
+      "offset": 18079,
       "length": 34,
       "value": "\"[RTMP] onStatus: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17463,
+      "offset": 18112,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17532,
+      "offset": 18181,
       "length": 18,
       "value": "\"[RTMP] onStopped\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17708,
+      "offset": 18357,
       "length": 62,
       "value": "\"[RTMP] onRTMPError: code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17743,
+      "offset": 18392,
       "length": 1,
       "value": "\", message = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17769,
+      "offset": 18418,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17932,
+      "offset": 18581,
       "length": 45,
       "value": "\"[RTMP] onVideoBitrateChanged: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 17976,
+      "offset": 18625,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 18636,
+      "offset": 19285,
       "length": 35,
       "value": "\"[RTMP] onAlarmPublished: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 18670,
+      "offset": 19319,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 18934,
+      "offset": 19583,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 19300,
+      "offset": 19949,
       "length": 37,
       "value": "\"streamKeyState is \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 19336,
+      "offset": 19985,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 20333,
+      "offset": 20982,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 20650,
+      "offset": 21299,
       "length": 37,
       "value": "\"videoRoomState is \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 20686,
+      "offset": 21335,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "BooleanLiteral",
-      "offset": 21303,
+      "offset": 21952,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 21721,
+      "offset": 22370,
       "length": 37,
       "value": "\"[RTMP] onZoomChanged: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/streamer\/FFLStreamer.swift",
       "kind": "StringLiteral",
-      "offset": 21757,
+      "offset": 22406,
       "length": 2,
       "value": "\"\""
     },
@@ -64758,64 +64932,64 @@
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 623,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1007,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 1150,
+      "offset": 1427,
       "length": 17,
       "value": "\"network-caching\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 1169,
+      "offset": 1446,
       "length": 3,
-      "value": "500"
+      "value": "750"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 1186,
-      "length": 18,
-      "value": "\"sout-mux-caching\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1206,
-      "length": 3,
-      "value": "500"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 447,
+      "offset": 484,
       "length": 10,
       "value": "\"FlipFlopLiteSDK.RTMPPlayer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
-      "length": 36,
-      "value": "\"[RTMPPlayer]: \""
+      "offset": 1869,
+      "length": 61,
+      "value": "\"[RTMPPlayer]: mediaPlayerStateChanged: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 1644,
+      "offset": 1929,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2099,
+      "offset": 2384,
       "length": 5,
       "value": "90000"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/RTMPPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2115,
+      "offset": 2400,
       "length": 19,
       "value": "\"rtmp player error\""
     },
@@ -65781,21 +65955,21 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4656,
+      "offset": 4747,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4694,
+      "offset": 4785,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 5052,
+      "offset": 5143,
       "length": 17,
       "value": "\"left video room\""
     },
@@ -65809,140 +65983,140 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 5968,
+      "offset": 6059,
       "length": 18,
       "value": "\"[HLS] onPrepared\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6194,
+      "offset": 6285,
       "length": 17,
       "value": "\"[HLS] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6366,
+      "offset": 6457,
       "length": 22,
       "value": "\"[HLS] onFailedToPlay\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6468,
+      "offset": 6559,
       "length": 20,
       "value": "\"failed to play hls\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6568,
+      "offset": 6659,
       "length": 17,
       "value": "\"[HLS] onStopped\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6737,
+      "offset": 6828,
       "length": 19,
       "value": "\"[HLS] onCompleted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6921,
+      "offset": 7012,
       "length": 79,
       "value": "\"[HLS] onError: code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6958,
+      "offset": 7049,
       "length": 1,
       "value": "\", message = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6999,
+      "offset": 7090,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7520,
+      "offset": 7611,
       "length": 18,
       "value": "\"[RTMP] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7692,
+      "offset": 7783,
       "length": 17,
       "value": "\"[RTMP] onPaused\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7863,
+      "offset": 7954,
       "length": 18,
       "value": "\"[RTMP] onStopped\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8038,
+      "offset": 8129,
       "length": 20,
       "value": "\"[RTMP] onCompleted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8241,
+      "offset": 8332,
       "length": 62,
       "value": "\"[RTMP] onError: code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8272,
+      "offset": 8363,
       "length": 1,
       "value": "\", description = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8302,
+      "offset": 8393,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 8528,
+      "offset": 8619,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8687,
+      "offset": 8778,
       "length": 37,
       "value": "\"videoRoomState is \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8723,
+      "offset": 8814,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 8946,
+      "offset": 9037,
       "length": 3,
       "value": "2.0"
     },
@@ -70569,210 +70743,210 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2509,
+      "offset": 2585,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2608,
+      "offset": 2684,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2779,
+      "offset": 2855,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3042,
+      "offset": 3118,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 3457,
+      "offset": 3533,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3528,
+      "offset": 3604,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3617,
+      "offset": 3693,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 3681,
+      "offset": 3757,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4097,
+      "offset": 4173,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4153,
+      "offset": 4229,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4199,
+      "offset": 4275,
       "length": 58,
       "value": "\"error : code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4228,
+      "offset": 4304,
       "length": 1,
       "value": "\", message = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4256,
+      "offset": 4332,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4437,
+      "offset": 4513,
       "length": 56,
       "value": "\"response chat history : message count = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4492,
+      "offset": 4568,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 4615,
+      "offset": 4691,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4673,
+      "offset": 4749,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 4963,
+      "offset": 5039,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 5143,
+      "offset": 5219,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 5373,
+      "offset": 5449,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 6045,
+      "offset": 6121,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 6174,
+      "offset": 6250,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6690,
+      "offset": 6766,
       "length": 110,
       "value": "\"request chat history : channelId = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6738,
+      "offset": 6814,
       "length": 1,
       "value": "\" \/ channelMessageId = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6799,
+      "offset": 6875,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7524,
+      "offset": 7600,
       "length": 36,
       "value": "\"onChatMessageReceived : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7559,
+      "offset": 7635,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8131,
+      "offset": 8207,
       "length": 13,
       "value": "\"en_US_POSIX\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8188,
+      "offset": 8264,
       "length": 28,
       "value": "\"yyyy-MM-dd'T'HH:mm:ssZZZZZ\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 8282,
+      "offset": 8358,
       "length": 1,
       "value": "0"
     },
@@ -70786,84 +70960,84 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 8620,
+      "offset": 8696,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 8844,
+      "offset": 8920,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9033,
+      "offset": 9109,
       "length": 18,
       "value": "\"[HLS] onPrepared\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9189,
+      "offset": 9265,
       "length": 16,
       "value": "\"[HLS] onPaused\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9342,
+      "offset": 9418,
       "length": 17,
       "value": "\"[HLS] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9502,
+      "offset": 9578,
       "length": 22,
       "value": "\"[HLS] onFailedToPlay\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9604,
+      "offset": 9680,
       "length": 20,
       "value": "\"failed to play hls\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9704,
+      "offset": 9780,
       "length": 17,
       "value": "\"[HLS] onStopped\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9861,
+      "offset": 9937,
       "length": 19,
       "value": "\"[HLS] onCompleted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10033,
+      "offset": 10109,
       "length": 83,
       "value": "\"[HLS] onError: code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10070,
+      "offset": 10146,
       "length": 1,
       "value": "\", description = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLVodPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10115,
+      "offset": 10191,
       "length": 2,
       "value": "\"\""
     },
@@ -83463,203 +83637,161 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 423,
+      "offset": 460,
+      "length": 5,
+      "value": "80105"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
+      "kind": "IntegerLiteral",
+      "offset": 515,
       "length": 5,
       "value": "80110"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 476,
+      "offset": 568,
       "length": 5,
       "value": "80200"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 524,
+      "offset": 615,
       "length": 5,
       "value": "80201"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 573,
+      "offset": 665,
       "length": 5,
       "value": "80202"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 628,
-      "length": 5,
-      "value": "80203"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 673,
-      "length": 5,
-      "value": "80204"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 717,
-      "length": 5,
-      "value": "80205"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 753,
-      "length": 5,
-      "value": "80206"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 806,
-      "length": 5,
-      "value": "80200"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 853,
-      "length": 5,
-      "value": "80201"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 903,
-      "length": 5,
-      "value": "80202"
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
-      "kind": "IntegerLiteral",
-      "offset": 953,
+      "offset": 715,
       "length": 5,
       "value": "80300"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1003,
+      "offset": 765,
       "length": 5,
       "value": "80301"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1049,
+      "offset": 811,
       "length": 5,
       "value": "80302"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1090,
+      "offset": 852,
       "length": 5,
       "value": "80400"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1137,
+      "offset": 899,
       "length": 5,
       "value": "80401"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1189,
+      "offset": 951,
       "length": 5,
       "value": "80402"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1240,
+      "offset": 1002,
       "length": 5,
       "value": "80403"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1294,
+      "offset": 1056,
       "length": 5,
       "value": "80404"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1345,
+      "offset": 1107,
       "length": 5,
       "value": "80405"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 1159,
       "length": 5,
       "value": "80406"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1450,
+      "offset": 1212,
       "length": 5,
       "value": "80407"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1503,
+      "offset": 1265,
       "length": 5,
       "value": "80408"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1554,
+      "offset": 1316,
       "length": 5,
       "value": "80409"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1603,
+      "offset": 1365,
       "length": 5,
       "value": "80410"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2015,
+      "offset": 1777,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2029,
+      "offset": 1791,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2243,
+      "offset": 2005,
       "length": 38,
       "value": "\"https:\/\/api-sandbox.lite.flipflop.tv\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2329,
+      "offset": 2091,
       "length": 30,
       "value": "\"https:\/\/api.lite.flipflop.tv\""
     },

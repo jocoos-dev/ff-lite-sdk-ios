@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/FlipFlopLiteSDK-Swift.h</key>
 		<data>
-		qIOzdzDej0NhCEb6LytsyWC0Jww=
+		Ha2M/iNij2vzhUzQjnE4t5XLSgc=
 		</data>
 		<key>Headers/FlipFlopSDK_IOS.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XNtqjci2y6d+kkPXrAL9HGQGclQ=
+		hAnTI86eyNEZKboaqyMEhCm1Vuk=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		DJwVQA3h/KZZzD0/R1hh+qmV3pw=
+		/i4lgkdYDeMyZXCjLCkvYKByXN0=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		tbx9CgGBAESOlmn9zVQ11bZwmqE=
+		uuBCIO+d0DXVUAaaUTVhU+reUk8=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		tbx9CgGBAESOlmn9zVQ11bZwmqE=
+		uuBCIO+d0DXVUAaaUTVhU+reUk8=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iUHXNQpzgyFr7Nb63mlo1ZnRZ8Q=
+		FFhLOXnDd8aD62whO6nhNGzKM0E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CczGFJkYg/fEaYvnv0ozddLd+B+c4Sg/bhRUcAGAphY=
+			jZCL62OxxUJEj038HAr/DYFAU2RlpkPHnX/tc3IASQ8=
 			</data>
 		</dict>
 		<key>Headers/FlipFlopSDK_IOS.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dd6o0j/1yAbr9Zs1Y/mqeVPcpiZesgJ0c+whjTtKy0o=
+			l+OerJZ/ydqhSMfM5BbT5Lly2O+V4tnV4ANv+xT8lyM=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ucAYo8CoGsR8KQDocao61So8Hgw7vnERTsfBI/CIyZQ=
+			v8wL4+AV5kbJ7/8PFDxXqxI7h6daGzh/t235SVUL5zI=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ucAYo8CoGsR8KQDocao61So8Hgw7vnERTsfBI/CIyZQ=
+			v8wL4+AV5kbJ7/8PFDxXqxI7h6daGzh/t235SVUL5zI=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jzXIsgD4AnSQGrYKexrSUXwOb+UrNuepRbIzQA58DW8=
+			oZXgwraLf7IKlPovRvU/ShwnDZdrJ663Du2AtPvd3es=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

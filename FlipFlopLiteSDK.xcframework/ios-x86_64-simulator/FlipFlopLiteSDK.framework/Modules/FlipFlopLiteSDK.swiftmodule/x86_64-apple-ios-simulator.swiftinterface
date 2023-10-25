@@ -317,6 +317,10 @@ public protocol RTMPPlayerDelegate : AnyObject {
   func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
 }
 @objc open class RTMPPlayer : ObjectiveC.NSObject {
+  open var isMuted: Swift.Bool {
+    get
+    set
+  }
   public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate)
   @objc deinit
   open func start()
@@ -324,6 +328,7 @@ public protocol RTMPPlayerDelegate : AnyObject {
 }
 extension FlipFlopLiteSDK.RTMPPlayer : MobileVLCKit.VLCMediaPlayerDelegate {
   @objc dynamic public func mediaPlayerStateChanged(_ aNotification: Foundation.Notification)
+  @objc dynamic public func mediaPlayerTimeChanged(_ aNotification: Foundation.Notification)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HKView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static var defaultBackgroundColor: UIKit.UIColor
@@ -848,6 +853,7 @@ public protocol FFLVodPlayerDelegate : AnyObject {
   public func resume()
   public func stop()
   public func exit()
+  public func mute(on: Swift.Bool)
   public func setFrame(frame: CoreFoundation.CGRect)
   public func seekTo(sec: Swift.Float64, exactly: Swift.Bool = false, completion: ((Swift.Float64) -> Swift.Void)?)
   @objc deinit
