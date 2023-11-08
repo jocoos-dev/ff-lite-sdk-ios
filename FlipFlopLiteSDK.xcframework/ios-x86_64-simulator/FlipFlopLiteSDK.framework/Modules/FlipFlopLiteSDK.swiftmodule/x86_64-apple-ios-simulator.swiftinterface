@@ -311,6 +311,7 @@ extension CoreImage.CIImage {
 }
 public protocol RTMPPlayerDelegate : AnyObject {
   func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPBuffering(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
@@ -329,6 +330,9 @@ public protocol RTMPPlayerDelegate : AnyObject {
 extension FlipFlopLiteSDK.RTMPPlayer : MobileVLCKit.VLCMediaPlayerDelegate {
   @objc dynamic public func mediaPlayerStateChanged(_ aNotification: Foundation.Notification)
   @objc dynamic public func mediaPlayerTimeChanged(_ aNotification: Foundation.Notification)
+  @objc dynamic public func mediaPlayerChapterChanged(_ aNotification: Foundation.Notification)
+  @objc dynamic public func mediaPlayerLoudnessChanged(_ aNotification: Foundation.Notification)
+  @objc dynamic public func mediaPlayerSnapshot(_ aNotification: Foundation.Notification)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HKView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static var defaultBackgroundColor: UIKit.UIColor
@@ -513,6 +517,7 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
 }
 extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.RTMPPlayerDelegate {
   public func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPBuffering(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
@@ -1618,12 +1623,15 @@ public struct FFLConfig {
   public init(serverAddr: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers public class FlipFlopLite : ObjectiveC.NSObject {
+  public static var loggingLevel: Logboard.LBLogger.Level {
+    get
+    set
+  }
   public static func initialize(config: FlipFlopLiteSDK.FFLConfig)
   public static func getStreamer(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
   public static func getLivePlayer(accessToken: Swift.String, videoRoomId: Swift.UInt64, channelId: Swift.UInt64) -> FlipFlopLiteSDK.FFLLivePlayer
   public static func getVodPlayer(accessToken: Swift.String, channelId: Swift.UInt64, liveStartedAt: Swift.String) -> FlipFlopLiteSDK.FFLVodPlayer
   public static func getRoom(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLRoom
-  public static func debug(level: Logboard.LBLogger.Level)
   @objc override dynamic public init()
   @objc deinit
 }
