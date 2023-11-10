@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/FlipFlopLiteSDK-Swift.h</key>
 		<data>
-		xG3q5L+/g/03wU5zi5zi1HzhYYA=
+		JDZG5XmKkrm0D1qIQTuUZxshCS0=
 		</data>
 		<key>Headers/FlipFlopSDK_IOS.h</key>
 		<data>
@@ -14,27 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1LWXCc3MAntdg4cqD6oGpk7Ypfg=
+		Z8jLMi01Y1H3lc2XnsaxbYHUrjk=
+		</data>
+		<key>KSPlayer_KSPlayer.bundle/Info.plist</key>
+		<data>
+		8KFncHdPdFAXDzwpZMWSa3Oy6n4=
+		</data>
+		<key>KSPlayer_KSPlayer.bundle/Shaders.dat</key>
+		<data>
+		ub06Md70A0pTgHvzZ7tlVaWmRso=
+		</data>
+		<key>KSPlayer_KSPlayer.bundle/default.metallib</key>
+		<data>
+		csVqZ66YlZnqNfV3UtUGbO9sFGg=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		qQxFrKcbHVWpcc/vANGjzWVCGI4=
+		CRb46MuUGK9LiQ/KDMiQh7V2MTY=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		vES91iZrDfivqBGTnuqzz+SOF8c=
+		VLQp3ZACR6OOcT7kxyuexDnvPM4=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		2n///mziKNO0e0efBP3OfLZwnHg=
+		pwCdrpRQ/4OvkKbqP3eriCvyUVE=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		vES91iZrDfivqBGTnuqzz+SOF8c=
+		VLQp3ZACR6OOcT7kxyuexDnvPM4=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		MnbtseiyVU4PVrJfkKySa4W9Dr0=
+		ClUYN/l0Dwq3AjS0Qp6QI2CC7No=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t1h8rDRWYcDJzSislUwDE88EBzl2PalRBN77FtF6Or0=
+			VWEcKV5AxxjoQLEZNDRpiTfahPET4hxLBtp0NNBnFIk=
 			</data>
 		</dict>
 		<key>Headers/FlipFlopSDK_IOS.h</key>
@@ -57,39 +69,60 @@
 			8Jn5LMb9RuDkdGAfc1L9xpVLC42mO46NhTHdNi0lthY=
 			</data>
 		</dict>
+		<key>KSPlayer_KSPlayer.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M7a4uIRimf5x0GMalgYTh3CnQaRoG8l9v7XbGAiP7OY=
+			</data>
+		</dict>
+		<key>KSPlayer_KSPlayer.bundle/Shaders.dat</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			I195pU2vhowi9+EuolpGSOEpAzdThSB9wxlICOJppO8=
+			</data>
+		</dict>
+		<key>KSPlayer_KSPlayer.bundle/default.metallib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0dj775KIvOl2CYh84K62Jmnm20s+JRQGaAYI8kjq+aE=
+			</data>
+		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iaIgfjCxcPOREsiYeOD/AwJhKxiOiAeCT1J/W40/vdw=
+			60gCBtvkJKkZssz/VlJH92EyVDN++o7Ij6ZiLsufkZ0=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			++bPRIZOdKOUgrptl6NvI2tl9ScHpM27UY+IYl76vIA=
+			Y2+8I+BzRuI8kSm0QNXdlfVy0/sTYG7p/SInDTBEsmU=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PXp7t9shvOTK4b/BZeyKN0hXOvdX7/TsKPjT6qeKEAA=
+			TBR2hHwPTUhXum4xR8AUrw6altTkzY1TGlkYr99uq7A=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			++bPRIZOdKOUgrptl6NvI2tl9ScHpM27UY+IYl76vIA=
+			Y2+8I+BzRuI8kSm0QNXdlfVy0/sTYG7p/SInDTBEsmU=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U+jdnpquBHyn6X4kDheEex5TX5nRpsYpttsjVS2MyUk=
+			X+kL7L79u4XBfxIERrii/NpMqrABGHXy/jTnVaaY5Pc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
