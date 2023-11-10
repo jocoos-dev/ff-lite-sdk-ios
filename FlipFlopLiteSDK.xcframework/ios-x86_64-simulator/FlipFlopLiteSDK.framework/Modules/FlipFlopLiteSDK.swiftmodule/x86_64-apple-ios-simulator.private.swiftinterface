@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FlipFlopLiteSDK
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FlipFlopLiteSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
@@ -14,10 +14,10 @@ import DeviceKit
 import Foundation
 import GLKit
 import ImageIO
+import KSPlayer
 import LDSwiftEventSource
 import Logboard
 import MetalKit
-import MobileVLCKit
 import Network
 import Swift
 import SystemConfiguration
@@ -25,6 +25,7 @@ import UIKit
 import VideoToolbox
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public enum Origin {
   case app
   case members
@@ -310,29 +311,17 @@ extension CoreImage.CIImage {
   public class func alphaImage(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat, color: UIKit.UIColor, cornerRadius: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat) -> CoreImage.CIImage
 }
 public protocol RTMPPlayerDelegate : AnyObject {
-  func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
-  func onRTMPBuffering(player: FlipFlopLiteSDK.RTMPPlayer)
-  func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
-  func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
-  func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
-  func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
+  func onRTMPStarted(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPBuffering(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPPaused(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPStopped(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPCompleted(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPError(player: any FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
 }
-@objc open class RTMPPlayer : ObjectiveC.NSObject {
-  open var isMuted: Swift.Bool {
-    get
-    set
-  }
-  public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate)
-  @objc deinit
-  open func start()
-  open func stop()
-}
-extension FlipFlopLiteSDK.RTMPPlayer : MobileVLCKit.VLCMediaPlayerDelegate {
-  @objc dynamic public func mediaPlayerStateChanged(_ aNotification: Foundation.Notification)
-  @objc dynamic public func mediaPlayerTimeChanged(_ aNotification: Foundation.Notification)
-  @objc dynamic public func mediaPlayerChapterChanged(_ aNotification: Foundation.Notification)
-  @objc dynamic public func mediaPlayerLoudnessChanged(_ aNotification: Foundation.Notification)
-  @objc dynamic public func mediaPlayerSnapshot(_ aNotification: Foundation.Notification)
+public protocol RTMPPlayer {
+  func start()
+  func stop()
+  func updatePlayerItem(url: Foundation.URL)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HKView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static var defaultBackgroundColor: UIKit.UIColor
@@ -516,12 +505,12 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
   public func onForeground(player: FlipFlopLiteSDK.HLSPlayer)
 }
 extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.RTMPPlayerDelegate {
-  public func onRTMPStarted(player: FlipFlopLiteSDK.RTMPPlayer)
-  public func onRTMPBuffering(player: FlipFlopLiteSDK.RTMPPlayer)
-  public func onRTMPPaused(player: FlipFlopLiteSDK.RTMPPlayer)
-  public func onRTMPStopped(player: FlipFlopLiteSDK.RTMPPlayer)
-  public func onRTMPCompleted(player: FlipFlopLiteSDK.RTMPPlayer)
-  public func onRTMPError(player: FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
+  public func onRTMPStarted(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPBuffering(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPPaused(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPStopped(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPCompleted(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPError(player: any FlipFlopLiteSDK.RTMPPlayer, code: Swift.Int, message: Swift.String)
 }
 public struct ZoomInfo {
   public let min: CoreFoundation.CGFloat
@@ -1470,6 +1459,27 @@ extension FlipFlopLiteSDK.AudioCodec {
   public var rawValue: Swift.Int {
     get
   }
+}
+@objc open class KSPlayer : ObjectiveC.NSObject {
+  open var isMuted: Swift.Bool {
+    get
+    set
+  }
+  public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate)
+  @objc deinit
+}
+extension FlipFlopLiteSDK.KSPlayer : FlipFlopLiteSDK.RTMPPlayer {
+  public func start()
+  public func stop()
+  public func updatePlayerItem(url: Foundation.URL)
+}
+extension FlipFlopLiteSDK.KSPlayer : KSPlayer.PlayerControllerDelegate {
+  public func playerController(state: KSPlayer.KSPlayerState)
+  public func playerController(currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
+  public func playerController(finish: (any Swift.Error)?)
+  public func playerController(maskShow _: Swift.Bool)
+  public func playerController(action _: KSPlayer.PlayerButtonType)
+  public func playerController(bufferedCount _: Swift.Int, consumeTime _: Foundation.TimeInterval)
 }
 public enum FLVSoundRate : Swift.UInt8 {
   case kHz5_5
