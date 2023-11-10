@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BzgeJvaKYl0hq5QEeXHa5qZQBk4=
+		E77fQ1RsdKm8CBWp4q0m0mWDyVs=
 		</data>
 		<key>KSPlayer_KSPlayer.bundle/Info.plist</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		TM9E6ggxz8tyt3DhebhXChF/GYE=
+		ICDa7vtkPsk5UuXK6aMj6cxfV78=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		7d2J20HU0kzD+fQsvSX8+/MqjgA=
+		9ItBxgTCHAr5r1JitK8xPEU7hEE=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7d2J20HU0kzD+fQsvSX8+/MqjgA=
+		9ItBxgTCHAr5r1JitK8xPEU7hEE=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yaU3SfN2ZrFcEAsPi0pojPR5jwI=
+		nJjqMwPKM6EJfPJTVGaH1YDXco8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i/EQVXSroSv3BbhHdaGnywYuOsiUw44dA5QifjsGjik=
+			rfQlArnnQsWNdvurGgqX9cGnLIitccJrbTpzAS5FYL0=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sfSBPKQOQCuLKHVpCtPQaLF4pJsubI1/l+X+LTfnTo0=
+			HmhsdTTkFiVAApDSz/8XyBEOiLkLPjTIsxIxr6jCs0Q=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sfSBPKQOQCuLKHVpCtPQaLF4pJsubI1/l+X+LTfnTo0=
+			HmhsdTTkFiVAApDSz/8XyBEOiLkLPjTIsxIxr6jCs0Q=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sH1DZB7MIdyN4cA31r+dMYiRrIiH3XM1wF70rLbrweQ=
+			VWDockbAg7L3DWjsuN3jgis0X4xIVcr5w9Fe5VpMSAY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
