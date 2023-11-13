@@ -11,10 +11,11 @@ import CoreImage
 import CoreMedia
 import CoreVideo
 import DeviceKit
+import FFmpegKit_mysangle
 import Foundation
 import GLKit
 import ImageIO
-import KSPlayer
+import KSPlayer_mysangle
 import LDSwiftEventSource
 import Logboard
 import MetalKit
@@ -1473,12 +1474,12 @@ extension FlipFlopLiteSDK.KSPlayer : FlipFlopLiteSDK.RTMPPlayer {
   public func stop()
   public func updatePlayerItem(url: Foundation.URL)
 }
-extension FlipFlopLiteSDK.KSPlayer : KSPlayer.PlayerControllerDelegate {
-  public func playerController(state: KSPlayer.KSPlayerState)
+extension FlipFlopLiteSDK.KSPlayer : KSPlayer_mysangle.PlayerControllerDelegate {
+  public func playerController(state: KSPlayer_mysangle.KSPlayerState)
   public func playerController(currentTime: Foundation.TimeInterval, totalTime: Foundation.TimeInterval)
   public func playerController(finish: (any Swift.Error)?)
   public func playerController(maskShow _: Swift.Bool)
-  public func playerController(action _: KSPlayer.PlayerButtonType)
+  public func playerController(action _: KSPlayer_mysangle.PlayerButtonType)
   public func playerController(bufferedCount _: Swift.Int, consumeTime _: Foundation.TimeInterval)
 }
 public enum FLVSoundRate : Swift.UInt8 {

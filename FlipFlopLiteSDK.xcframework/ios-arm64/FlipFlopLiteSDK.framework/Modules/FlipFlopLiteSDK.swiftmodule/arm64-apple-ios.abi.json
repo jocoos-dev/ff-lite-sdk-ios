@@ -41969,8 +41969,15 @@
       },
       {
         "kind": "Import",
-        "name": "KSPlayer",
-        "printedName": "KSPlayer",
+        "name": "KSPlayer_mysangle",
+        "printedName": "KSPlayer_mysangle",
+        "declKind": "Import",
+        "moduleName": "FlipFlopLiteSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "FFmpegKit_mysangle",
+        "printedName": "FFmpegKit_mysangle",
         "declKind": "Import",
         "moduleName": "FlipFlopLiteSDK"
       },
@@ -42216,13 +42223,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "KSPlayerState",
-                "printedName": "KSPlayer.KSPlayerState",
-                "usr": "s:8KSPlayer0A5StateO"
+                "printedName": "KSPlayer_mysangle.KSPlayerState",
+                "usr": "s:17KSPlayer_mysangle0A5StateO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15FlipFlopLiteSDK8KSPlayerC16playerController5stateyAB0E5StateO_tF",
-            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC16playerController5stateyAB0E5StateO_tF",
+            "usr": "s:15FlipFlopLiteSDK8KSPlayerC16playerController5statey0E9_mysangle0E5StateO_tF",
+            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC16playerController5statey0E9_mysangle0E5StateO_tF",
             "moduleName": "FlipFlopLiteSDK",
             "declAttributes": [
               "AccessControl"
@@ -42338,13 +42345,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "PlayerButtonType",
-                "printedName": "KSPlayer.PlayerButtonType",
-                "usr": "s:8KSPlayer16PlayerButtonTypeO"
+                "printedName": "KSPlayer_mysangle.PlayerButtonType",
+                "usr": "s:17KSPlayer_mysangle16PlayerButtonTypeO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15FlipFlopLiteSDK8KSPlayerC16playerController6actionyAB16PlayerButtonTypeO_tF",
-            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC16playerController6actionyAB16PlayerButtonTypeO_tF",
+            "usr": "s:15FlipFlopLiteSDK8KSPlayerC16playerController6actiony0E9_mysangle16PlayerButtonTypeO_tF",
+            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC16playerController6actiony0E9_mysangle16PlayerButtonTypeO_tF",
             "moduleName": "FlipFlopLiteSDK",
             "declAttributes": [
               "AccessControl"
@@ -42411,8 +42418,8 @@
             "kind": "Conformance",
             "name": "PlayerControllerDelegate",
             "printedName": "PlayerControllerDelegate",
-            "usr": "s:8KSPlayer24PlayerControllerDelegateP",
-            "mangledName": "$s8KSPlayer24PlayerControllerDelegateP"
+            "usr": "s:17KSPlayer_mysangle24PlayerControllerDelegateP",
+            "mangledName": "$s17KSPlayer_mysangle24PlayerControllerDelegateP"
           },
           {
             "kind": "Conformance",
@@ -82789,112 +82796,112 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 333,
+      "offset": 368,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 803,
+      "offset": 838,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 846,
+      "offset": 881,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 914,
+      "offset": 949,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 145,
+      "offset": 180,
       "length": 8,
       "value": "\"FlipFlopLiteSDK.KSPlayer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 1697,
+      "offset": 1732,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 1784,
+      "offset": 1819,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 1851,
+      "offset": 1886,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2040,
+      "offset": 2075,
       "length": 36,
       "value": "\"[RTMPPlayer] PlayerState: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2075,
+      "offset": 2110,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2661,
+      "offset": 2696,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2813,
+      "offset": 2848,
       "length": 5,
       "value": "90000"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2829,
+      "offset": 2864,
       "length": 19,
       "value": "\"rtmp player error\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3156,
+      "offset": 3191,
       "length": 54,
       "value": "\"[RTMPPlayer] Finish: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3209,
+      "offset": 3244,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 3290,
+      "offset": 3325,
       "length": 5,
       "value": "90000"
     },
