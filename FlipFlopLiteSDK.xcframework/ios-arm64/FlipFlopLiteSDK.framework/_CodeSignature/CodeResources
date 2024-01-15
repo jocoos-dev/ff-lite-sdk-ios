@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		y3jnwFfIP9YvtcxpTmzjQzuuktw=
+		P7Van1aPD6yMf3SDIFO9yIFSo1o=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Ou820C24EioUk3lX6d/xxbnF+x8=
+		jVM4jCx+Kwd1ocQ14YXlXIR/mjY=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		aEqtCXy6SJSGocsGwxG4NjsS+Yw=
+		DGL7jTkWw9GhgECraqV4+BKnhkA=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		pwCdrpRQ/4OvkKbqP3eriCvyUVE=
+		CxpCkagcrkjJ9mBLM/QbwIC5cYU=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		aEqtCXy6SJSGocsGwxG4NjsS+Yw=
+		DGL7jTkWw9GhgECraqV4+BKnhkA=
 		</data>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		TRI6y2g0Po4eopLG1bgB7OB9l/I=
+		SnUs9EdGvLjpKho1Az2CmauIP4Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			htQKKmqAe3wnln0/Hkp25jJvbbg0jmOTcj+Gg66aF8k=
+			5/5RkrxglsyYQSpW7k9mLtcwfQ7ceXf/ZgNSrh5tsFI=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ftu5APNTNN1lIul+nJizLfVYjk+NInALy19R6OXkB0=
+			s35ac/KkaWi3L/Ys0Ze6BWvhvLi4sCGFSoT6/Vr1dCo=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TBR2hHwPTUhXum4xR8AUrw6altTkzY1TGlkYr99uq7A=
+			ajDjMQM0V4yu2/9FOEalKl9CUXjsGeb7liSd00lqo48=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ftu5APNTNN1lIul+nJizLfVYjk+NInALy19R6OXkB0=
+			s35ac/KkaWi3L/Ys0Ze6BWvhvLi4sCGFSoT6/Vr1dCo=
 			</data>
 		</dict>
 		<key>Modules/FlipFlopLiteSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HzOPbAe1lBWmKoz6R+FHOQ147/Lh0E1c70RXINyHffs=
+			dlRiq3E8K9wWKAkYX0p/BuiXlkY2Mk575RnDFKb1u4Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
