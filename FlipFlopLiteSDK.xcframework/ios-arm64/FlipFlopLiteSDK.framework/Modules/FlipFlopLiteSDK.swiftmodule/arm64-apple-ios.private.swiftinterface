@@ -1977,6 +1977,8 @@ public enum RTMPObjectEncoding : Swift.UInt8 {
   public var cameraPos: AVFoundation.AVCaptureDevice.Position
   public var visibility: Swift.String
   public var videoGravity: AVFoundation.AVLayerVideoGravity
+  public var echoCancellation: Swift.Bool
+  public var adaptiveBitrate: Swift.Bool
   @objc override dynamic public init()
   @objc override dynamic public var description: Swift.String {
     @objc get
