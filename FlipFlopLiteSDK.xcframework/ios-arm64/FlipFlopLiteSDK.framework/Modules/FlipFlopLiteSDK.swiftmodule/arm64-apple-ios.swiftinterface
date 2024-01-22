@@ -254,6 +254,8 @@ public protocol FFAlarmDelegate : AnyObject {
   public func stop()
   public func exit()
   public func retry()
+  public func openCamera()
+  public func releaseCamera()
   public func liveChat() -> FlipFlopLiteSDK.FFLChannel?
   public func liveManager() -> FlipFlopLiteSDK.FFLLiveManager?
   @objc deinit
