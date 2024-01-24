@@ -497,10 +497,18 @@ public protocol FFLLivePlayerDelegate : AnyObject {
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didReceive message: FlipFlopLiteSDK.FFLMessage)
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didFail error: FlipFlopLiteSDK.FFError)
 }
+@objc @_inheritsConvenienceInitializers public class FFLLivePlayerOptions : ObjectiveC.NSObject {
+  public var lowLatency: Swift.Bool
+  @objc override dynamic public init()
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
 @objc @_hasMissingDesignatedInitializers public class FFLLivePlayer : ObjectiveC.NSObject {
   weak public var delegate: (any FlipFlopLiteSDK.FFLLivePlayerDelegate)?
   public func enter()
-  public func prepare(view: UIKit.UIView, uri: Swift.String)
+  public func prepare(view: UIKit.UIView, uri: Swift.String, options: FlipFlopLiteSDK.FFLLivePlayerOptions = FFLLivePlayerOptions())
   public func start()
   public func stop()
   public func exit()
@@ -1478,12 +1486,17 @@ extension FlipFlopLiteSDK.AudioCodec {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers open class KSPlayerOptions : ObjectiveC.NSObject {
+  public var lowLatency: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc open class KSPlayer : ObjectiveC.NSObject {
   open var isMuted: Swift.Bool {
     get
     set
   }
-  public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate)
+  public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate, options: FlipFlopLiteSDK.KSPlayerOptions = KSPlayerOptions())
   @objc deinit
 }
 extension FlipFlopLiteSDK.KSPlayer : FlipFlopLiteSDK.RTMPPlayer {

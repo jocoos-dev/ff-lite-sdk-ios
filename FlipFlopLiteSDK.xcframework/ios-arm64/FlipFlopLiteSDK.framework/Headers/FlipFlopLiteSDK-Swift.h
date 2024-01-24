@@ -410,6 +410,13 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK13FFLLivePlayer")
 
 
 
+SWIFT_CLASS("_TtC15FlipFlopLiteSDK20FFLLivePlayerOptions")
+@interface FFLLivePlayerOptions : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
 SWIFT_CLASS("_TtC15FlipFlopLiteSDK7FFLRoom")
 @interface FFLRoom : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -710,6 +717,12 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK8KSPlayer")
 @end
 
 
+
+
+SWIFT_CLASS("_TtC15FlipFlopLiteSDK15KSPlayerOptions")
+@interface KSPlayerOptions : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @protocol MTLDevice;
 
