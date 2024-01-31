@@ -969,6 +969,7 @@ public protocol VideoEncoderDelegate : AnyObject {
     case profileLevel
     case maxKeyFrameIntervalDuration
     case scalingMode
+    case H264EntropyMode
     public var keyPath: Swift.AnyKeyPath {
       get
     }
@@ -1510,7 +1511,7 @@ extension FlipFlopLiteSDK.KSPlayer : KSPlayer_mysangle.PlayerControllerDelegate 
   public func playerController(finish: (any Swift.Error)?)
   public func playerController(maskShow _: Swift.Bool)
   public func playerController(action _: KSPlayer_mysangle.PlayerButtonType)
-  public func playerController(bufferedCount _: Swift.Int, consumeTime _: Foundation.TimeInterval)
+  public func playerController(bufferedCount count: Swift.Int, consumeTime time: Foundation.TimeInterval)
 }
 public enum FLVSoundRate : Swift.UInt8 {
   case kHz5_5
@@ -1992,8 +1993,10 @@ public enum RTMPObjectEncoding : Swift.UInt8 {
   public var cameraPos: AVFoundation.AVCaptureDevice.Position
   public var visibility: Swift.String
   public var videoGravity: AVFoundation.AVLayerVideoGravity
+  public var entropyMode: Swift.String
   public var echoCancellation: Swift.Bool
   public var adaptiveBitrate: Swift.Bool
+  public var adaitpveBitrateMaxRatio: Swift.Int
   @objc override dynamic public init()
   @objc override dynamic public var description: Swift.String {
     @objc get
