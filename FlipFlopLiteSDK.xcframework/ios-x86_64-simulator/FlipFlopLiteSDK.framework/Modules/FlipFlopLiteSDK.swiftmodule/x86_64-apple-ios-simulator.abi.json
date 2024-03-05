@@ -40697,6 +40697,49 @@
             "moduleName": "FlipFlopLiteSDK",
             "isOpen": true,
             "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "execute",
+            "printedName": "execute(_:cvPixelBuffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CIImage",
+                "printedName": "CoreImage.CIImage",
+                "usr": "c:objc(cs)CIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CIImage",
+                "printedName": "CoreImage.CIImage",
+                "usr": "c:objc(cs)CIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreVideo.CVBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CVBuffer",
+                    "printedName": "CoreVideo.CVBuffer",
+                    "usr": "c:@T@CVBufferRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK11VideoEffectC7execute_13cvPixelBufferSo7CIImageCAG_So11CVBufferRefaSgtF",
+            "mangledName": "$s15FlipFlopLiteSDK11VideoEffectC7execute_13cvPixelBufferSo7CIImageCAG_So11CVBufferRefaSgtF",
+            "moduleName": "FlipFlopLiteSDK",
+            "isOpen": true,
+            "declAttributes": [
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -63875,84 +63918,84 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 2868,
+      "offset": 2906,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 2937,
+      "offset": 2975,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 3462,
+      "offset": 3500,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 3544,
+      "offset": 3582,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 4525,
+      "offset": 4563,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 4608,
+      "offset": 4646,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "StringLiteral",
-      "offset": 5681,
+      "offset": 5719,
       "length": 15,
       "value": "\"CIColorMatrix\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 5756,
+      "offset": 5794,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 5759,
+      "offset": 5797,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 5762,
+      "offset": 5800,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "IntegerLiteral",
-      "offset": 5845,
+      "offset": 5883,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/transition\/TransitionEffect.swift",
       "kind": "StringLiteral",
-      "offset": 5960,
+      "offset": 5998,
       "length": 14,
       "value": "\"inputAVector\""
     },
@@ -87101,28 +87144,28 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/rtmp\/Sources\/Media\/VideoIOComponent.swift",
       "kind": "Array",
-      "offset": 17309,
+      "offset": 17332,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/rtmp\/Sources\/Media\/VideoIOComponent.swift",
       "kind": "Array",
-      "offset": 17380,
+      "offset": 17403,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/rtmp\/Sources\/Media\/VideoIOComponent.swift",
       "kind": "Array",
-      "offset": 17491,
+      "offset": 17514,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/rtmp\/Sources\/Media\/VideoIOComponent.swift",
       "kind": "Array",
-      "offset": 18428,
+      "offset": 18451,
       "length": 2,
       "value": "[]"
     },
@@ -89236,21 +89279,21 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/GifFilter.swift",
       "kind": "BooleanLiteral",
-      "offset": 807,
+      "offset": 845,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/GifFilter.swift",
       "kind": "IntegerLiteral",
-      "offset": 980,
+      "offset": 1018,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/GifFilter.swift",
       "kind": "IntegerLiteral",
-      "offset": 1050,
+      "offset": 1088,
       "length": 1,
       "value": "2"
     },
@@ -89264,7 +89307,7 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/GifFilter.swift",
       "kind": "BooleanLiteral",
-      "offset": 1660,
+      "offset": 1698,
       "length": 4,
       "value": "true"
     },
@@ -94598,7 +94641,7 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/Movie.swift",
       "kind": "IntegerLiteral",
-      "offset": 719,
+      "offset": 757,
       "length": 1,
       "value": "0"
     },

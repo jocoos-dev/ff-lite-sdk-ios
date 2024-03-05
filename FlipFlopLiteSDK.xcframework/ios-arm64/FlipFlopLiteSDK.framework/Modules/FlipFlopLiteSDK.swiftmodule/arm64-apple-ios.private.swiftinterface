@@ -1390,6 +1390,7 @@ public enum FLVAudioCodec : Swift.UInt8 {
     get
   }
   open func execute(_ image: CoreImage.CIImage) -> CoreImage.CIImage
+  open func execute(_ image: CoreImage.CIImage, cvPixelBuffer buffer: CoreVideo.CVPixelBuffer?) -> CoreImage.CIImage
   @objc override dynamic public init()
   @objc deinit
 }
