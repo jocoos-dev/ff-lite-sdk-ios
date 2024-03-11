@@ -1998,6 +1998,7 @@ public enum RTMPObjectEncoding : Swift.UInt8 {
   public var echoCancellation: Swift.Bool
   public var adaptiveBitrate: Swift.Bool
   public var adaitpveBitrateMaxRatio: Swift.Int
+  public var audioOnly: Swift.Bool
   @objc override dynamic public init()
   @objc override dynamic public var description: Swift.String {
     @objc get
