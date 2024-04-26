@@ -223,6 +223,7 @@ public protocol FFLStreamerDelegate : AnyObject {
   func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didPublish alarmState: FlipFlopLiteSDK.AlarmState)
   func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didChangeVideoBitrate bitrate: Swift.Int)
   func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didChangeZoom zoomFactor: CoreFoundation.CGFloat)
+  func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didOpenChannel channelId: Swift.UInt64)
   func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didReceive message: FlipFlopLiteSDK.FFLMessage)
   func fflStreamer(_ streamer: FlipFlopLiteSDK.FFLStreamer, didFail error: FlipFlopLiteSDK.FFError)
 }
@@ -232,6 +233,16 @@ public enum AlarmState {
   case alert_level_2
   case alert_level_3
   public static func == (a: FlipFlopLiteSDK.AlarmState, b: FlipFlopLiteSDK.AlarmState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum RtmpOutputMode {
+  case cmaf
+  case rtmp
+  case rtmp_cmaf
+  public static func == (a: FlipFlopLiteSDK.RtmpOutputMode, b: FlipFlopLiteSDK.RtmpOutputMode) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -247,7 +258,8 @@ public protocol FFAlarmDelegate : AnyObject {
     set
   }
   public func setVideoRoomInfo(title: Swift.String)
-  public func enter()
+  public func enter(videoRoomId: Swift.UInt64? = nil, requestVideoRoomStart: Swift.Bool = false)
+  public func setRtmpOutputMode(rtmpOutputMode: FlipFlopLiteSDK.RtmpOutputMode)
   public func prepare(preview: UIKit.UIView, config: FlipFlopLiteSDK.FFStreamerConfig = FFStreamerConfig())
   public func start()
   public func restart(videoRoomId: Swift.UInt64)
@@ -494,6 +506,8 @@ extension UIKit.UIImage {
 public protocol FFLLivePlayerDelegate : AnyObject {
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didUpdate playerState: FlipFlopLiteSDK.PlayerState)
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didUpdate broadcastState: FlipFlopLiteSDK.BroadcastState)
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didUpdate liveUrl: Swift.String)
+  func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didOpenChannel channelId: Swift.UInt64)
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didReceive message: FlipFlopLiteSDK.FFLMessage)
   func fflLivePlayer(_ livePlayer: FlipFlopLiteSDK.FFLLivePlayer, didFail error: FlipFlopLiteSDK.FFError)
 }
@@ -2040,6 +2054,8 @@ extension FlipFlopLiteSDK.PlayerState : Swift.Equatable {}
 extension FlipFlopLiteSDK.PlayerState : Swift.Hashable {}
 extension FlipFlopLiteSDK.AlarmState : Swift.Equatable {}
 extension FlipFlopLiteSDK.AlarmState : Swift.Hashable {}
+extension FlipFlopLiteSDK.RtmpOutputMode : Swift.Equatable {}
+extension FlipFlopLiteSDK.RtmpOutputMode : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Equatable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.RawRepresentable {}
