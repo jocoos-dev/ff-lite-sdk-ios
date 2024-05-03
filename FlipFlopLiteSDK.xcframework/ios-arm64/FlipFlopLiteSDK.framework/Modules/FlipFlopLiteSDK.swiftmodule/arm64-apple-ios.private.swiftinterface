@@ -264,6 +264,7 @@ public protocol FFAlarmDelegate : AnyObject {
   public func start()
   public func restart(videoRoomId: Swift.UInt64)
   public func stop()
+  public func endLive(videoRoomId: Swift.UInt64)
   public func exit()
   public func retry()
   public func openCamera()
