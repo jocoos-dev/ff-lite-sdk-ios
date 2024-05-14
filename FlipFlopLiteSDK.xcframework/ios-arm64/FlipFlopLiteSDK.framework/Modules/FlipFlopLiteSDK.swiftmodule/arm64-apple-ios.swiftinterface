@@ -1899,6 +1899,7 @@ public protocol HLSPlayerDelegate : AnyObject {
   open func updatePlayerItem(url: Foundation.URL)
   open func seekTo(seconds: Swift.Float64, exactly: Swift.Bool = false, completion: ((Swift.Float64) -> Swift.Void)?)
   open func stop()
+  open func reset()
   open func startPIP()
   open func stopPIP()
 }
