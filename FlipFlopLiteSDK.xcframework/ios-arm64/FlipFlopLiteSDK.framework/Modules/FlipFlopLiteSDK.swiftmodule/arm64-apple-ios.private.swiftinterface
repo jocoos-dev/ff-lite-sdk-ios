@@ -41,6 +41,19 @@ public class AECAudioStream {
   public func resetAudioMode()
   @objc deinit
 }
+public enum StreamKeyState {
+  case active_prep
+  case active_live_prep
+  case active
+  case active_live
+  case inactive_live
+  case inactive
+  public static func == (a: FlipFlopLiteSDK.StreamKeyState, b: FlipFlopLiteSDK.StreamKeyState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum Origin {
   case app
   case members
@@ -2043,6 +2056,8 @@ extension FlipFlopLiteSDK.RTMPSharedObject : Swift.CustomDebugStringConvertible 
   override final public func listen()
   @objc deinit
 }
+extension FlipFlopLiteSDK.StreamKeyState : Swift.Equatable {}
+extension FlipFlopLiteSDK.StreamKeyState : Swift.Hashable {}
 extension FlipFlopLiteSDK.Origin : Swift.Equatable {}
 extension FlipFlopLiteSDK.Origin : Swift.Hashable {}
 extension FlipFlopLiteSDK.TransitionType : Swift.Equatable {}
