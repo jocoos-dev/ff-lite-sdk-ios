@@ -383,6 +383,18 @@ SWIFT_CLASS("_TtC15FlipFlopLiteSDK25DefaultAVRecorderDelegate")
 @end
 
 
+SWIFT_CLASS("_TtC15FlipFlopLiteSDK11FFCStreamer")
+@interface FFCStreamer : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+
 SWIFT_CLASS("_TtC15FlipFlopLiteSDK7FFError")
 @interface FFError : NSObject
 @property (nonatomic, readonly) NSInteger code;

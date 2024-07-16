@@ -29,6 +29,56 @@ import VideoToolbox
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public protocol FFCStreamerDelegate : AnyObject {
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didUpdate streamKeyState: FlipFlopLiteSDK.StreamKeyState)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didUpdate streamerState: FlipFlopLiteSDK.StreamerState)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didUpdate broadcastState: FlipFlopLiteSDK.BroadcastState)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didExist videoRoom: FlipFlopLiteSDK.FFLVideoRoom)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didPublish alarmState: FlipFlopLiteSDK.AlarmState)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didChangeVideoBitrate bitrate: Swift.Int)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didChangeZoom zoomFactor: CoreFoundation.CGFloat)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didOpenChannel channelId: Swift.UInt64)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didReceive message: FlipFlopLiteSDK.FFLMessage)
+  func ffcStreamer(_ streamer: FlipFlopLiteSDK.FFCStreamer, didFail error: FlipFlopLiteSDK.FFError)
+}
+@objc @_hasMissingDesignatedInitializers public class FFCStreamer : ObjectiveC.NSObject {
+  weak public var delegate: (any FlipFlopLiteSDK.FFCStreamerDelegate)?
+  public var isGestureEnabled: Swift.Bool {
+    get
+    set
+  }
+  public func setVideoRoomInfo(title: Swift.String)
+  public func enter(videoRoomId: Swift.UInt64? = nil, requestVideoRoomStart: Swift.Bool = false)
+  public func setRtmpOutputMode(rtmpOutputMode: FlipFlopLiteSDK.RtmpOutputMode)
+  public func prepare(preview: UIKit.UIView, config: FlipFlopLiteSDK.FFStreamerConfig = FFStreamerConfig())
+  public func start()
+  public func restart(videoRoomId: Swift.UInt64)
+  public func stop()
+  public func startVideoRoom(videoRoomId: Swift.UInt64? = nil)
+  public func endVideoRoom(videoRoomId: Swift.UInt64? = nil)
+  public func exit(videoRoomId: Swift.UInt64? = nil)
+  public func retry()
+  public func openCamera()
+  public func releaseCamera()
+  public func liveChat() -> FlipFlopLiteSDK.FFLChannel?
+  public func liveManager() -> FlipFlopLiteSDK.FFLLiveManager?
+  @objc deinit
+}
+extension FlipFlopLiteSDK.FFCStreamer {
+  public func onInSufficentBW()
+  public func onSufficentBW()
+  public func onRTMPConnected()
+  public func onRTMPDisconnected()
+  public func onRTMPStarted()
+  public func onRTMPStatus(notification: Foundation.Notification)
+  public func onRTMPStopped()
+  public func onRTMPError(code: Swift.Int, description: Swift.String)
+  public func onVideoBitrateChanged(newBitrate: Swift.Int, maxBitrate: Swift.Int)
+  public func onAlarmchanged(insufficientCount: Swift.Int)
+}
+extension FlipFlopLiteSDK.FFCStreamer {
+  public func onZoomChanged(zoomFactor: CoreFoundation.CGFloat)
+}
 public enum AECAudioStreamError : Swift.Error {
   case osStatusError(status: Darwin.OSStatus)
 }
@@ -40,6 +90,19 @@ public class AECAudioStream {
   public func stopAudioUnit() throws
   public func resetAudioMode()
   @objc deinit
+}
+public enum StreamKeyState {
+  case active_prep
+  case active_live_prep
+  case active
+  case active_live
+  case inactive_live
+  case inactive
+  public static func == (a: FlipFlopLiteSDK.StreamKeyState, b: FlipFlopLiteSDK.StreamKeyState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum Origin {
   case app
@@ -1686,6 +1749,7 @@ public struct FFLConfig {
   }
   public static func initialize(config: FlipFlopLiteSDK.FFLConfig)
   public static func getStreamer(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLStreamer
+  public static func getFFCStreamer(accessToken: Swift.String) -> FlipFlopLiteSDK.FFCStreamer
   public static func getLivePlayer(accessToken: Swift.String, videoRoomId: Swift.UInt64, channelId: Swift.UInt64) -> FlipFlopLiteSDK.FFLLivePlayer
   public static func getVodPlayer(accessToken: Swift.String, channelId: Swift.UInt64, liveStartedAt: Swift.String) -> FlipFlopLiteSDK.FFLVodPlayer
   public static func getRoom(accessToken: Swift.String) -> FlipFlopLiteSDK.FFLRoom
@@ -2043,6 +2107,8 @@ extension FlipFlopLiteSDK.RTMPSharedObject : Swift.CustomDebugStringConvertible 
   override final public func listen()
   @objc deinit
 }
+extension FlipFlopLiteSDK.StreamKeyState : Swift.Equatable {}
+extension FlipFlopLiteSDK.StreamKeyState : Swift.Hashable {}
 extension FlipFlopLiteSDK.Origin : Swift.Equatable {}
 extension FlipFlopLiteSDK.Origin : Swift.Hashable {}
 extension FlipFlopLiteSDK.TransitionType : Swift.Equatable {}
