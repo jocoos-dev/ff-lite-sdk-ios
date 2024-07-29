@@ -10182,6 +10182,33 @@
           },
           {
             "kind": "Function",
+            "name": "onRTMPBufferFinished",
+            "printedName": "onRTMPBufferFinished(player:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTMPPlayer",
+                "printedName": "FlipFlopLiteSDK.RTMPPlayer",
+                "usr": "s:15FlipFlopLiteSDK10RTMPPlayerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK18RTMPPlayerDelegateP20onRTMPBufferFinished6playeryAA0E0_p_tF",
+            "mangledName": "$s15FlipFlopLiteSDK18RTMPPlayerDelegateP20onRTMPBufferFinished6playeryAA0E0_p_tF",
+            "moduleName": "FlipFlopLiteSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : FlipFlopLiteSDK.RTMPPlayerDelegate>",
+            "sugared_genericSig": "<Self where Self : FlipFlopLiteSDK.RTMPPlayerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "onRTMPPaused",
             "printedName": "onRTMPPaused(player:)",
             "children": [
@@ -10393,6 +10420,428 @@
         "moduleName": "FlipFlopLiteSDK",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTMPPlayerState",
+        "printedName": "RTMPPlayerState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "ready",
+            "printedName": "ready",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO5readyyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO5readyyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "started",
+            "printedName": "started",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO7startedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO7startedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "stopped",
+            "printedName": "stopped",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO7stoppedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO7stoppedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "buffering",
+            "printedName": "buffering",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO9bufferingyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO9bufferingyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "bufferFinished",
+            "printedName": "bufferFinished",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO14bufferFinishedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO14bufferFinishedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "paused",
+            "printedName": "paused",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO6pausedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO6pausedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "resumed",
+            "printedName": "resumed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO7resumedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO7resumedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "ended",
+            "printedName": "ended",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(FlipFlopLiteSDK.RTMPPlayerState.Type) -> FlipFlopLiteSDK.RTMPPlayerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTMPPlayerState",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                    "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "FlipFlopLiteSDK.RTMPPlayerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTMPPlayerState",
+                        "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO5endedyA2CmF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO5endedyA2CmF",
+            "moduleName": "FlipFlopLiteSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTMPPlayerState",
+                "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTMPPlayerState",
+                "printedName": "FlipFlopLiteSDK.RTMPPlayerState",
+                "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO2eeoiySbAC_ACtFZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO9hashValueSivp",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO9hashValueSivp",
+            "moduleName": "FlipFlopLiteSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO9hashValueSivg",
+                "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO9hashValueSivg",
+                "moduleName": "FlipFlopLiteSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "FlipFlopLiteSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15FlipFlopLiteSDK15RTMPPlayerStateO",
+        "mangledName": "$s15FlipFlopLiteSDK15RTMPPlayerStateO",
+        "moduleName": "FlipFlopLiteSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
         ]
       },
       {
@@ -15844,6 +16293,33 @@
             "declKind": "Func",
             "usr": "s:15FlipFlopLiteSDK13FFLLivePlayerC15onRTMPBuffering6playeryAA10RTMPPlayer_p_tF",
             "mangledName": "$s15FlipFlopLiteSDK13FFLLivePlayerC15onRTMPBuffering6playeryAA10RTMPPlayer_p_tF",
+            "moduleName": "FlipFlopLiteSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRTMPBufferFinished",
+            "printedName": "onRTMPBufferFinished(player:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTMPPlayer",
+                "printedName": "FlipFlopLiteSDK.RTMPPlayer",
+                "usr": "s:15FlipFlopLiteSDK10RTMPPlayerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK13FFLLivePlayerC20onRTMPBufferFinished6playeryAA10RTMPPlayer_p_tF",
+            "mangledName": "$s15FlipFlopLiteSDK13FFLLivePlayerC20onRTMPBufferFinished6playeryAA10RTMPPlayer_p_tF",
             "moduleName": "FlipFlopLiteSDK",
             "declAttributes": [
               "AccessControl"
@@ -45465,6 +45941,46 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "removeFromView",
+            "printedName": "removeFromView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK8KSPlayerC14removeFromViewyyF",
+            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC14removeFromViewyyF",
+            "moduleName": "FlipFlopLiteSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK8KSPlayerC5pauseyyF",
+            "mangledName": "$s15FlipFlopLiteSDK8KSPlayerC5pauseyyF",
+            "moduleName": "FlipFlopLiteSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -50106,6 +50622,1338 @@
         "printedName": "Logboard",
         "declKind": "Import",
         "moduleName": "FlipFlopLiteSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFLErrorCode",
+        "printedName": "FFLErrorCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "MEDIA_CONNECTION_FAILED",
+            "printedName": "MEDIA_CONNECTION_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_CONNECTION_FAILEDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_CONNECTION_FAILEDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_CONNECTION_FAILEDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_CONNECTION_FAILEDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_STREAMING_STOPPED",
+            "printedName": "MEDIA_STREAMING_STOPPED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_STREAMING_STOPPEDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_STREAMING_STOPPEDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_STREAMING_STOPPEDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23MEDIA_STREAMING_STOPPEDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_STREAMING_FAILED",
+            "printedName": "MEDIA_STREAMING_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_STREAMING_FAILEDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_STREAMING_FAILEDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_STREAMING_FAILEDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_STREAMING_FAILEDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_STREAMING_INVALID_VIEW",
+            "printedName": "MEDIA_STREAMING_INVALID_VIEW",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_STREAMING_INVALID_VIEWSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_STREAMING_INVALID_VIEWSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_STREAMING_INVALID_VIEWSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_STREAMING_INVALID_VIEWSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_HLS_PLAYER_PLAY_FAILED",
+            "printedName": "MEDIA_HLS_PLAYER_PLAY_FAILED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_HLS_PLAYER_PLAY_FAILEDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_HLS_PLAYER_PLAY_FAILEDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_HLS_PLAYER_PLAY_FAILEDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_HLS_PLAYER_PLAY_FAILEDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_AV_AUDIO_SESSION_ERROR",
+            "printedName": "MEDIA_AV_AUDIO_SESSION_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_AV_AUDIO_SESSION_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_AV_AUDIO_SESSION_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_AV_AUDIO_SESSION_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28MEDIA_AV_AUDIO_SESSION_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_TOO_MANY_RETRIES",
+            "printedName": "MEDIA_TOO_MANY_RETRIES",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_TOO_MANY_RETRIESSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_TOO_MANY_RETRIESSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_TOO_MANY_RETRIESSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22MEDIA_TOO_MANY_RETRIESSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MEDIA_ERROR",
+            "printedName": "MEDIA_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV11MEDIA_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV11MEDIA_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV11MEDIA_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV11MEDIA_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CHANNEL_UNEXPECTED_ERROR",
+            "printedName": "CHANNEL_UNEXPECTED_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV24CHANNEL_UNEXPECTED_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV24CHANNEL_UNEXPECTED_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV24CHANNEL_UNEXPECTED_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV24CHANNEL_UNEXPECTED_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CHANNEL_INVALID_MESSAGE",
+            "printedName": "CHANNEL_INVALID_MESSAGE",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23CHANNEL_INVALID_MESSAGESivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23CHANNEL_INVALID_MESSAGESivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23CHANNEL_INVALID_MESSAGESivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23CHANNEL_INVALID_MESSAGESivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CHANNEL_MESSAGE_SEND_ERROR",
+            "printedName": "CHANNEL_MESSAGE_SEND_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_MESSAGE_SEND_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_MESSAGE_SEND_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_MESSAGE_SEND_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_MESSAGE_SEND_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "CHANNEL_UNAUTHORIZED_ERROR",
+            "printedName": "CHANNEL_UNAUTHORIZED_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_UNAUTHORIZED_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_UNAUTHORIZED_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_UNAUTHORIZED_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26CHANNEL_UNAUTHORIZED_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "STREAMER_NOT_PREPARED",
+            "printedName": "STREAMER_NOT_PREPARED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV21STREAMER_NOT_PREPAREDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV21STREAMER_NOT_PREPAREDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV21STREAMER_NOT_PREPAREDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV21STREAMER_NOT_PREPAREDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "STREAMER_NO_SERVER_ADDRESS",
+            "printedName": "STREAMER_NO_SERVER_ADDRESS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26STREAMER_NO_SERVER_ADDRESSSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26STREAMER_NO_SERVER_ADDRESSSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV26STREAMER_NO_SERVER_ADDRESSSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV26STREAMER_NO_SERVER_ADDRESSSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "STREAMER_NO_STREAM_KEY",
+            "printedName": "STREAMER_NO_STREAM_KEY",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22STREAMER_NO_STREAM_KEYSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22STREAMER_NO_STREAM_KEYSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV22STREAMER_NO_STREAM_KEYSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV22STREAMER_NO_STREAM_KEYSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_ERROR",
+            "printedName": "SERVER_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV12SERVER_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV12SERVER_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV12SERVER_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV12SERVER_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_UNEXPECTED_ERROR",
+            "printedName": "SERVER_UNEXPECTED_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23SERVER_UNEXPECTED_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23SERVER_UNEXPECTED_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV23SERVER_UNEXPECTED_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV23SERVER_UNEXPECTED_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_INVALID_VIDEO_ROOM_ID",
+            "printedName": "SERVER_INVALID_VIDEO_ROOM_ID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_INVALID_VIDEO_ROOM_IDSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_INVALID_VIDEO_ROOM_IDSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_INVALID_VIDEO_ROOM_IDSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_INVALID_VIDEO_ROOM_IDSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_STREAM_KEY_GET_ERROR",
+            "printedName": "SERVER_STREAM_KEY_GET_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_STREAM_KEY_GET_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_STREAM_KEY_GET_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_STREAM_KEY_GET_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_STREAM_KEY_GET_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_CREATE_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_CREATE_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV30SERVER_VIDEO_ROOM_CREATE_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV30SERVER_VIDEO_ROOM_CREATE_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV30SERVER_VIDEO_ROOM_CREATE_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV30SERVER_VIDEO_ROOM_CREATE_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_GET_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_GET_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_GET_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_GET_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_GET_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_GET_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_JOIN_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_JOIN_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_VIDEO_ROOM_JOIN_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_VIDEO_ROOM_JOIN_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_VIDEO_ROOM_JOIN_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV28SERVER_VIDEO_ROOM_JOIN_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_START_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_START_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_START_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_START_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_START_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_START_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_LEAVE_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_LEAVE_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_LEAVE_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_LEAVE_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_LEAVE_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV29SERVER_VIDEO_ROOM_LEAVE_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_VIDEO_ROOM_END_ERROR",
+            "printedName": "SERVER_VIDEO_ROOM_END_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_END_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_END_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_END_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV27SERVER_VIDEO_ROOM_END_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "SERVER_MESSAGES_GET_ERROR",
+            "printedName": "SERVER_MESSAGES_GET_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV25SERVER_MESSAGES_GET_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV25SERVER_MESSAGES_GET_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV25SERVER_MESSAGES_GET_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV25SERVER_MESSAGES_GET_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "RTMP_PLAYER_ERROR",
+            "printedName": "RTMP_PLAYER_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV17RTMP_PLAYER_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV17RTMP_PLAYER_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV17RTMP_PLAYER_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV17RTMP_PLAYER_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "RTMP_PLAYER_TOO_LONG_BUFFERING_ERROR",
+            "printedName": "RTMP_PLAYER_TOO_LONG_BUFFERING_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV36RTMP_PLAYER_TOO_LONG_BUFFERING_ERRORSivpZ",
+            "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV36RTMP_PLAYER_TOO_LONG_BUFFERING_ERRORSivpZ",
+            "moduleName": "FlipFlopLiteSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV36RTMP_PLAYER_TOO_LONG_BUFFERING_ERRORSivgZ",
+                "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV36RTMP_PLAYER_TOO_LONG_BUFFERING_ERRORSivgZ",
+                "moduleName": "FlipFlopLiteSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15FlipFlopLiteSDK12FFLErrorCodeV",
+        "mangledName": "$s15FlipFlopLiteSDK12FFLErrorCodeV",
+        "moduleName": "FlipFlopLiteSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -56244,6 +58092,27 @@
             "declKind": "Func",
             "usr": "s:15FlipFlopLiteSDK9HLSPlayerC8setFrame5frameySo6CGRectV_tF",
             "mangledName": "$s15FlipFlopLiteSDK9HLSPlayerC8setFrame5frameySo6CGRectV_tF",
+            "moduleName": "FlipFlopLiteSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeLayer",
+            "printedName": "removeLayer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15FlipFlopLiteSDK9HLSPlayerC11removeLayeryyF",
+            "mangledName": "$s15FlipFlopLiteSDK9HLSPlayerC11removeLayeryyF",
             "moduleName": "FlipFlopLiteSDK",
             "isOpen": true,
             "declAttributes": [
@@ -71576,115 +73445,185 @@
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 1380,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1871,
+      "offset": 1577,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1612,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2030,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2460,
+      "offset": 2619,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2843,
+      "offset": 3002,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 3040,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3238,
+      "offset": 3397,
       "length": 39,
       "value": "\"joined video room(\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3276,
+      "offset": 3435,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3735,
+      "offset": 3894,
       "length": 26,
       "value": "\"already called prepare()\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4164,
-      "length": 8,
-      "value": "\"egress\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 4190,
-      "length": 6,
-      "value": "\"rtmp\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 4723,
+      "offset": 4944,
       "length": 38,
       "value": "\"should call prepare() before start()\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5107,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5232,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 5739,
+      "offset": 6031,
       "length": 39,
       "value": "\"error : \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 5777,
+      "offset": 6069,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6135,
+      "offset": 6427,
       "length": 23,
       "value": "\"left video room(\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6157,
+      "offset": 6449,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6590,
+      "offset": 6882,
       "length": 39,
       "value": "\"connected to channel in FFLLivePlayer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 6843,
+      "offset": 7135,
       "length": 42,
       "value": "\"disconnected to channel in FFLLivePlayer\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7408,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7579,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7623,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 7717,
+      "length": 8,
+      "value": "\"egress\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 7743,
+      "length": 6,
+      "value": "\"rtmp\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "FloatLiteral",
+      "offset": 8166,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "FloatLiteral",
+      "offset": 9057,
+      "length": 3,
+      "value": "0.3"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
@@ -71696,182 +73635,245 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7203,
+      "offset": 9517,
       "length": 18,
       "value": "\"[HLS] onPrepared\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7430,
+      "offset": 9744,
       "length": 17,
       "value": "\"[HLS] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7603,
+      "offset": 9917,
       "length": 22,
       "value": "\"[HLS] onFailedToPlay\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7705,
+      "offset": 10019,
       "length": 20,
       "value": "\"failed to play hls\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7806,
+      "offset": 10120,
       "length": 17,
       "value": "\"[HLS] onStopped\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 7976,
+      "offset": 10290,
       "length": 19,
       "value": "\"[HLS] onCompleted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8160,
+      "offset": 10474,
       "length": 79,
       "value": "\"[HLS] onError: code = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8197,
+      "offset": 10511,
       "length": 1,
       "value": "\", message = \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8238,
+      "offset": 10552,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8760,
+      "offset": 11074,
       "length": 18,
       "value": "\"[RTMP] onStarted\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8936,
+      "offset": 11250,
       "length": 20,
       "value": "\"[RTMP] onBuffering\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9115,
-      "length": 17,
-      "value": "\"[RTMP] onPaused\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 9287,
-      "length": 18,
-      "value": "\"[RTMP] onStopped\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 9463,
-      "length": 20,
-      "value": "\"[RTMP] onCompleted\""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 9667,
-      "length": 62,
-      "value": "\"[RTMP] onError: code = \""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 9698,
-      "length": 1,
-      "value": "\", description = \""
-    },
-    {
-      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
-      "kind": "StringLiteral",
-      "offset": 9728,
-      "length": 2,
-      "value": "\"\""
+      "offset": 11437,
+      "length": 25,
+      "value": "\"[RTMP] onBufferFinished\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 9954,
+      "offset": 11485,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10068,
+      "offset": 11570,
+      "length": 17,
+      "value": "\"[RTMP] onPaused\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 11742,
+      "length": 18,
+      "value": "\"[RTMP] onStopped\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 11918,
+      "length": 62,
+      "value": "\"[RTMP] onCompleted - videoRoomState = \""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 11979,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 12163,
+      "length": 50,
+      "value": "\"[RTMP] forceRestartRtmpPlayer in onRTMPCompleted\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 12465,
+      "length": 62,
+      "value": "\"[RTMP] onError: code = \""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 12496,
+      "length": 1,
+      "value": "\", description = \""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 12526,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12554,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12750,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12784,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 12821,
+      "length": 46,
+      "value": "\"[RTMP] forceRestartRtmpPlayer in onRTMPError\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13351,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 13465,
       "length": 44,
       "value": "\"received VideoRoomState(\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10110,
+      "offset": 13507,
       "length": 1,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 10498,
+      "offset": 13781,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
+      "kind": "FloatLiteral",
+      "offset": 13940,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 10773,
+      "offset": 14540,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11752,
+      "offset": 16301,
       "length": 86,
       "value": "\"received message: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11789,
+      "offset": 16338,
       "length": 2,
       "value": "\" by \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11813,
+      "offset": 16362,
       "length": 1,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/player\/FFLLivePlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11837,
+      "offset": 16386,
       "length": 2,
       "value": "\"\""
     },
@@ -87942,31 +89944,101 @@
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 684,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 735,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "FloatLiteral",
+      "offset": 757,
+      "length": 3,
+      "value": "5.0"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 549,
+      "offset": 833,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1142,
+      "offset": 1426,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1185,
+      "offset": 1469,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1253,
+      "offset": 1537,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 2323,
+      "length": 45,
+      "value": "\"[RTMPPlayer] waited too long: \""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 2367,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 2514,
+      "length": 51,
+      "value": "\"waited buffering too long. restart player please.\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2687,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 2714,
+      "length": 37,
+      "value": "\"[RTMPPlayer] restart: \""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 2750,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "FloatLiteral",
+      "offset": 2827,
+      "length": 3,
+      "value": "0.3"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
@@ -87978,205 +90050,212 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2064,
+      "offset": 3421,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 2154,
+      "offset": 3511,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2237,
+      "offset": 3594,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2281,
+      "offset": 3638,
       "length": 3,
       "value": "\"f\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2288,
+      "offset": 3645,
       "length": 10,
       "value": "\"live_flv\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2340,
+      "offset": 3697,
       "length": 6,
       "value": "\"fast\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2350,
+      "offset": 3707,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2393,
+      "offset": 3750,
       "length": 8,
       "value": "\"fflags\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2405,
+      "offset": 3762,
       "length": 10,
       "value": "\"nobuffer\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2457,
+      "offset": 3814,
       "length": 7,
       "value": "\"flags\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2468,
+      "offset": 3825,
       "length": 11,
       "value": "\"low_delay\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2521,
+      "offset": 3878,
       "length": 4,
       "value": "\"vf\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2529,
+      "offset": 3886,
       "length": 16,
       "value": "\"setpts=N\/60\/TB\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2587,
+      "offset": 3944,
       "length": 4,
       "value": "\"af\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2595,
+      "offset": 3952,
       "length": 17,
       "value": "\"asetpts=N\/60\/TB\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2654,
+      "offset": 4011,
       "length": 8,
       "value": "\"strict\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2666,
+      "offset": 4023,
       "length": 14,
       "value": "\"experimental\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 2722,
+      "offset": 4079,
       "length": 19,
       "value": "\"multiple_requests\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2745,
+      "offset": 4102,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2804,
+      "offset": 4161,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "FloatLiteral",
-      "offset": 2894,
+      "offset": 4251,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 2977,
+      "offset": 4334,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3242,
+      "offset": 4599,
       "length": 36,
       "value": "\"[RTMPPlayer] PlayerState: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 3277,
+      "offset": 4634,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5163,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 4019,
-      "length": 5,
-      "value": "90000"
+      "offset": 5238,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4035,
+      "offset": 5784,
       "length": 19,
       "value": "\"rtmp player error\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4393,
+      "offset": 6142,
       "length": 54,
       "value": "\"[RTMPPlayer] Finish: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 4446,
+      "offset": 6195,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/KSPlayer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4527,
-      "length": 5,
-      "value": "90000"
+      "kind": "StringLiteral",
+      "offset": 6458,
+      "length": 19,
+      "value": "\"rtmp player error\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/filter\/SourceOverComposit.swift",
@@ -89763,210 +91842,224 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 191,
+      "offset": 205,
       "length": 5,
       "value": "80100"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 238,
+      "offset": 259,
       "length": 5,
       "value": "80101"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 284,
+      "offset": 312,
       "length": 5,
       "value": "80102"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 336,
+      "offset": 371,
       "length": 5,
       "value": "80103"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 388,
+      "offset": 430,
       "length": 5,
       "value": "80104"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 460,
+      "offset": 509,
       "length": 5,
       "value": "80105"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 526,
+      "offset": 582,
       "length": 5,
       "value": "80106"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 561,
+      "offset": 624,
       "length": 5,
       "value": "80110"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 614,
+      "offset": 684,
       "length": 5,
       "value": "80200"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 661,
+      "offset": 738,
       "length": 5,
       "value": "80201"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 711,
+      "offset": 795,
       "length": 5,
       "value": "80202"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 761,
+      "offset": 852,
       "length": 5,
       "value": "80203"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 811,
+      "offset": 909,
       "length": 5,
       "value": "80300"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 861,
+      "offset": 966,
       "length": 5,
       "value": "80301"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 907,
+      "offset": 1019,
       "length": 5,
       "value": "80302"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 948,
+      "offset": 1067,
       "length": 5,
       "value": "80400"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 995,
+      "offset": 1121,
       "length": 5,
       "value": "80401"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1047,
+      "offset": 1180,
       "length": 5,
       "value": "80402"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1098,
+      "offset": 1238,
       "length": 5,
       "value": "80403"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1152,
+      "offset": 1299,
       "length": 5,
       "value": "80404"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1203,
+      "offset": 1357,
       "length": 5,
       "value": "80405"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1255,
+      "offset": 1416,
       "length": 5,
       "value": "80406"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1308,
+      "offset": 1476,
       "length": 5,
       "value": "80407"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1361,
+      "offset": 1536,
       "length": 5,
       "value": "80408"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1412,
+      "offset": 1594,
       "length": 5,
       "value": "80409"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "IntegerLiteral",
-      "offset": 1461,
+      "offset": 1650,
       "length": 5,
       "value": "80410"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1703,
+      "length": 5,
+      "value": "90201"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1770,
+      "length": 5,
+      "value": "90203"
+    },
+    {
+      "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 1873,
+      "offset": 2182,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 1887,
+      "offset": 2196,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2101,
+      "offset": 2410,
       "length": 36,
       "value": "\"https:\/\/api-sandbox.flipflop.cloud\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopSDK_IOS\/FlipFlopLite.swift",
       "kind": "StringLiteral",
-      "offset": 2185,
+      "offset": 2494,
       "length": 28,
       "value": "\"https:\/\/api.flipflop.cloud\""
     },
@@ -95846,35 +97939,35 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 5557,
+      "offset": 5642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 6605,
+      "offset": 6690,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 6798,
+      "offset": 6883,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "IntegerLiteral",
-      "offset": 7116,
+      "offset": 7201,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 7625,
+      "offset": 7710,
       "length": 4,
       "value": "true"
     },
@@ -95888,189 +97981,189 @@
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8417,
+      "offset": 8502,
       "length": 35,
       "value": "\"newErrorLogEntry: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8451,
+      "offset": 8536,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8646,
+      "offset": 8731,
       "length": 71,
       "value": "\"error: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8683,
+      "offset": 8768,
       "length": 10,
       "value": "\" playerItem: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8716,
+      "offset": 8801,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8859,
+      "offset": 8944,
       "length": 20,
       "value": "\"error: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 8878,
+      "offset": 8963,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9024,
+      "offset": 9109,
       "length": 40,
       "value": "\"failedToPlayToEndTime: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9063,
+      "offset": 9148,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9510,
+      "offset": 9595,
       "length": 41,
       "value": "\"playerDidFinishPlaying: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9550,
+      "offset": 9635,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9901,
+      "offset": 9986,
       "length": 76,
       "value": "\"keypath: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9924,
+      "offset": 10009,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9927,
+      "offset": 10012,
       "length": 6,
       "value": "\" object: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9948,
+      "offset": 10033,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9951,
+      "offset": 10036,
       "length": 6,
       "value": "\" change: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "Dictionary",
-      "offset": 9972,
+      "offset": 10057,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 9976,
+      "offset": 10061,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10206,
+      "offset": 10291,
       "length": 41,
       "value": "\"observeValue: presentationSize \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10246,
+      "offset": 10331,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10416,
+      "offset": 10501,
       "length": 37,
       "value": "\"observeValue: isPlaybackBufferEmpty\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10546,
+      "offset": 10631,
       "length": 36,
       "value": "\"observeValue: isPlaybackBufferFull\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 10679,
+      "offset": 10764,
       "length": 40,
       "value": "\"observeValue: isPlaybackLikelyToKeepUp\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11053,
+      "offset": 11138,
       "length": 13,
       "value": "\"readyToPlay\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11582,
+      "offset": 11667,
       "length": 57,
       "value": "\"[HLSPlayer] failed error: \""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11638,
+      "offset": 11723,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/soonhyung\/programming\/ios\/flipflop-ios-sdk-flipflop-github\/FlipFlopMediaSDK\/HLSPlayer.swift",
       "kind": "StringLiteral",
-      "offset": 11819,
+      "offset": 11904,
       "length": 27,
       "value": "\"[HLSPlayer] unknown error\""
     },

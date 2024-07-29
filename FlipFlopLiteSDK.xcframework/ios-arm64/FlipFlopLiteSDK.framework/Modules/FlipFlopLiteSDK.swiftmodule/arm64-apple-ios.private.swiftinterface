@@ -406,6 +406,7 @@ extension CoreImage.CIImage {
 public protocol RTMPPlayerDelegate : AnyObject {
   func onRTMPStarted(player: any FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPBuffering(player: any FlipFlopLiteSDK.RTMPPlayer)
+  func onRTMPBufferFinished(player: any FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPPaused(player: any FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPStopped(player: any FlipFlopLiteSDK.RTMPPlayer)
   func onRTMPCompleted(player: any FlipFlopLiteSDK.RTMPPlayer)
@@ -415,6 +416,21 @@ public protocol RTMPPlayer {
   func start()
   func stop()
   func updatePlayerItem(url: Foundation.URL)
+}
+public enum RTMPPlayerState {
+  case ready
+  case started
+  case stopped
+  case buffering
+  case bufferFinished
+  case paused
+  case resumed
+  case ended
+  public static func == (a: FlipFlopLiteSDK.RTMPPlayerState, b: FlipFlopLiteSDK.RTMPPlayerState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HKView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static var defaultBackgroundColor: UIKit.UIColor
@@ -610,6 +626,7 @@ extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.HLSPlayerDelegate {
 extension FlipFlopLiteSDK.FFLLivePlayer : FlipFlopLiteSDK.RTMPPlayerDelegate {
   public func onRTMPStarted(player: any FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPBuffering(player: any FlipFlopLiteSDK.RTMPPlayer)
+  public func onRTMPBufferFinished(player: any FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPPaused(player: any FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPStopped(player: any FlipFlopLiteSDK.RTMPPlayer)
   public func onRTMPCompleted(player: any FlipFlopLiteSDK.RTMPPlayer)
@@ -1576,6 +1593,8 @@ extension FlipFlopLiteSDK.AudioCodec {
     set
   }
   public init(url: Foundation.URL, view: UIKit.UIView, delegate: any FlipFlopLiteSDK.RTMPPlayerDelegate, options: FlipFlopLiteSDK.KSPlayerOptions = KSPlayerOptions())
+  public func removeFromView()
+  public func pause()
   @objc deinit
 }
 extension FlipFlopLiteSDK.KSPlayer : FlipFlopLiteSDK.RTMPPlayer {
@@ -1728,6 +1747,36 @@ public enum FLVSoundRate : Swift.UInt8 {
   open func send(handlerName: Swift.String, arguments: Any?...)
   open func appendFile(_ file: Foundation.URL, completionHandler: FlipFlopLiteSDK.MP4Sampler.Handler? = nil)
   open func createMetaData() -> FlipFlopLiteSDK.ASObject
+}
+public struct FFLErrorCode {
+  public static let MEDIA_CONNECTION_FAILED: Swift.Int
+  public static let MEDIA_STREAMING_STOPPED: Swift.Int
+  public static let MEDIA_STREAMING_FAILED: Swift.Int
+  public static let MEDIA_STREAMING_INVALID_VIEW: Swift.Int
+  public static let MEDIA_HLS_PLAYER_PLAY_FAILED: Swift.Int
+  public static let MEDIA_AV_AUDIO_SESSION_ERROR: Swift.Int
+  public static let MEDIA_TOO_MANY_RETRIES: Swift.Int
+  public static let MEDIA_ERROR: Swift.Int
+  public static let CHANNEL_UNEXPECTED_ERROR: Swift.Int
+  public static let CHANNEL_INVALID_MESSAGE: Swift.Int
+  public static let CHANNEL_MESSAGE_SEND_ERROR: Swift.Int
+  public static let CHANNEL_UNAUTHORIZED_ERROR: Swift.Int
+  public static let STREAMER_NOT_PREPARED: Swift.Int
+  public static let STREAMER_NO_SERVER_ADDRESS: Swift.Int
+  public static let STREAMER_NO_STREAM_KEY: Swift.Int
+  public static let SERVER_ERROR: Swift.Int
+  public static let SERVER_UNEXPECTED_ERROR: Swift.Int
+  public static let SERVER_INVALID_VIDEO_ROOM_ID: Swift.Int
+  public static let SERVER_STREAM_KEY_GET_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_CREATE_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_GET_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_JOIN_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_START_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_LEAVE_ERROR: Swift.Int
+  public static let SERVER_VIDEO_ROOM_END_ERROR: Swift.Int
+  public static let SERVER_MESSAGES_GET_ERROR: Swift.Int
+  public static let RTMP_PLAYER_ERROR: Swift.Int
+  public static let RTMP_PLAYER_TOO_LONG_BUFFERING_ERROR: Swift.Int
 }
 public enum ServerConfig {
   case dev
@@ -1960,6 +2009,7 @@ public protocol HLSPlayerDelegate : AnyObject {
   open func pause()
   open func resume()
   open func setFrame(frame: CoreFoundation.CGRect)
+  open func removeLayer()
   open func updatePlayerItem(url: Foundation.URL)
   open func seekTo(seconds: Swift.Float64, exactly: Swift.Bool = false, completion: ((Swift.Float64) -> Swift.Void)?)
   open func stop()
@@ -2129,6 +2179,8 @@ extension FlipFlopLiteSDK.FLVAVCPacketType : Swift.RawRepresentable {}
 extension FlipFlopLiteSDK.FLVFrameType : Swift.Equatable {}
 extension FlipFlopLiteSDK.FLVFrameType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVFrameType : Swift.RawRepresentable {}
+extension FlipFlopLiteSDK.RTMPPlayerState : Swift.Equatable {}
+extension FlipFlopLiteSDK.RTMPPlayerState : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVTagType : Swift.Equatable {}
 extension FlipFlopLiteSDK.FLVTagType : Swift.Hashable {}
 extension FlipFlopLiteSDK.FLVTagType : Swift.RawRepresentable {}
